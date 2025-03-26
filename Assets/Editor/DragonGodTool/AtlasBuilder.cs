@@ -21,6 +21,8 @@ public class AtlasBuilder
             Directory.Delete(m_atlasRootPath, true);
         }
 
+        DataUtilityManager.InitDirectory(m_atlasRootPath);
+
         if (Directory.Exists(DataUtilityManager.m_binPath + "/Atlas"))
         {
             Directory.Delete(DataUtilityManager.m_binPath + "/Atlas", true);

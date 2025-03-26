@@ -66,7 +66,7 @@ SerializeReferenceClassIdentifiers:
 Assets:
 - Assets/UpdateAssets/Prefabs/UI/Workflow/LoginPanel.prefab
 Dependencies:
-- E:/MyProjects/CrimsonRift/AssetBundles/Android/animtion/play.anim_ab
-- E:/MyProjects/CrimsonRift/AssetBundles/Android/atlas/atlas00.atlas_ab
-- E:/MyProjects/CrimsonRift/AssetBundles/Android/atlas/atlas01.atlas_ab
-- E:/MyProjects/CrimsonRift/AssetBundles/Android/atlas/bg_hghg_wdtx1.atlas_ab
+- E:/MyProjects/Android/CrimsonRift/AssetBundles/Android/animtion/play.anim_ab
+- E:/MyProjects/Android/CrimsonRift/AssetBundles/Android/atlas/atlas00.atlas_ab
+- E:/MyProjects/Android/CrimsonRift/AssetBundles/Android/atlas/atlas01.atlas_ab
+- E:/MyProjects/Android/CrimsonRift/AssetBundles/Android/atlas/bg_hghg_wdtx1.atlas_ab

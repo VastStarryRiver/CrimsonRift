@@ -159,7 +159,7 @@ public class ExportExcelTool
         over:;
 
             SaveConfigData("Client", excelReader.Name, clientConfigData);
-            SaveConfigData("Server", excelReader.Name, serverConfigData);
+            //SaveConfigData("Server", excelReader.Name, serverConfigData);
         }
         while (excelReader.NextResult()/*下一张表*/);
     }

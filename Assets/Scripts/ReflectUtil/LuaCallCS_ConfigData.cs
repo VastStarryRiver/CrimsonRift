@@ -209,7 +209,7 @@ public static partial class LuaCallCS
 
     public static string FormatFileByteSize(long bytes)
     {
-        string[] units = { "B", "KB", "MB", "GB", "TB" };
+        string[] units = { "B", "KB", "MB", "G", "T" };
         int unitIndex = 0;
         double size = bytes;
 
