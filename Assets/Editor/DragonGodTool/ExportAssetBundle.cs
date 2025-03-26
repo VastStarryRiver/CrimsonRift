@@ -10,32 +10,18 @@ public class ExportAssetBundle
 
 
 
-    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_Android", false, 1)]
-    public static void BuildAssetBundles_Android()
+    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_iOS", false, 1)]
+    public static void BuildAssetBundles_iOS()
     {
-        BuildAssetBundles(m_rootPath + "AssetBundles/Android", BuildTarget.Android);
-        RenameMainAssetBundleFile(m_rootPath + "AssetBundles/Android/Android");
+        BuildAssetBundles(m_rootPath + "AssetBundles/iOS", BuildTarget.iOS);
+        RenameMainAssetBundleFile(m_rootPath + "AssetBundles/iOS/iOS");
     }
 
-    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_Windows", false, 3)]
-    public static void BuildAssetBundles_Windows()
+    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_macOS", false, 2)]
+    public static void BuildAssetBundles_macOS()
     {
-        BuildAssetBundles(m_rootPath + "AssetBundles/Windows", BuildTarget.StandaloneWindows64);
-        RenameMainAssetBundleFile(m_rootPath + "AssetBundles/Windows/Windows");
-    }
-
-    [MenuItem("GodDragonTool/AssetBundles/BuildWebBinFile", false, 4)]
-    public static void BuildWebBinFile()
-    {
-        using (FileStream fileStream = new FileStream(DataUtilityManager.m_localRootPath + "WebData.txt", FileMode.Open))
-        {
-            using (StreamReader streamReader = new StreamReader(fileStream))
-            {
-                LuaCallCS.SaveSafeFile(streamReader.ReadToEnd(), Application.streamingAssetsPath + "/WebData.bin");
-            }
-        }
-
-        AssetDatabase.Refresh();
+        BuildAssetBundles(m_rootPath + "AssetBundles/macOS", BuildTarget.StandaloneOSX);
+        RenameMainAssetBundleFile(m_rootPath + "AssetBundles/macOS/macOS");
     }
 
 

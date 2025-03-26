@@ -131,7 +131,7 @@ public class Launcher : MonoBehaviour
 
     private IEnumerator DownloadCatalogueFile()
     {
-        string webPath = DataUtilityManager.WebRootPath + "CatalogueFiles/" + DataUtilityManager.m_platform + "/CatalogueFile.txt";
+        string webPath = DataUtilityManager.WebRootPath + "CatalogueFiles/CatalogueFile.txt";
         UnityWebRequest requestHandler = UnityWebRequest.Get(webPath);//下载路径需要加上文件的后缀，没有后缀则不加
 
         DataUtilityManager.SetWebQuestData(ref requestHandler);

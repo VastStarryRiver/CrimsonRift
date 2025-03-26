@@ -1,8 +1,11 @@
-﻿using UnityEditor;
-using UnityEngine;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System;
+using System.IO;
+using System.Text;
+using System.Security.Cryptography;
+using Newtonsoft.Json;
+using UnityEditor;
+using UnityEngine;
 
 
 
@@ -10,47 +13,48 @@ public class CustomBuildScript
 {
     private static List<string> m_excludedFolders = new List<string> { "Assets/GameAssets" };// 设置需要排除的文件夹
     private static HashSet<string> m_excludedAssets = new HashSet<string>();// 收集所有需要排除的资源路径
-    private static string keystorePath = DataUtilityManager.m_localRootPath + "CrimsonRift.keystore"; // Keystore 文件路径
-    private static string keystorePassword = "149630764"; // Keystore 密码
-    private static string keyAlias = "crimsonrift"; // Alias 名称
-    private static string keyAliasPassword = "149630764"; // Alias 密码
-    private static string m_locationPathName = Environment.GetFolderPath(Environment.SpecialFolder.Desktop).Replace("\\","/") + "/CrimsonRift.apk";//打包的输出路径
+    private static string m_rootPath = Application.streamingAssetsPath.Replace("Assets/StreamingAssets", "");
+    private static Dictionary<string, string> m_filesContent = null;
 
 
 
     [MenuItem("GodDragonTool/打包流程/一键导出所有热更新资源", false, -2)]
-    public static void OneKeyExportAllAssets()
+    public static void OneKeyExportAllAssets_iOS()
     {
-        ExportExcelTool.ExportExcelToDictionary();
+        BuildWebBinFile();
+
         AtlasBuilder.PackSpriteAtlas();
-        ExportAssetBundle.BuildAssetBundles_Windows();
-        ExportAssetBundle.BuildAssetBundles_Android();
-        ExportCatalogueFile.BuildCatalogueFile_Windows();
-        ExportCatalogueFile.BuildCatalogueFile_Android();
+
+        ExportExcelTool.ExportExcelToDictionary();
+
+        ExportAssetBundle.BuildAssetBundles_iOS();
+        ExportAssetBundle.BuildAssetBundles_macOS();
+
+        CreateCatalogueFile();
     }
 
-    [MenuItem("GodDragonTool/打包流程/打包成APK文件", false, -1)]
-    public static void PackageProject_Android()
+    [MenuItem("GodDragonTool/打包流程/导出XCode工程", false, -1)]
+    public static void PackageProject_iOS()
     {
-        // 确保 keystore 文件存在
-        if (!File.Exists(keystorePath))
+        PackageProject(BuildTarget.iOS, "");
+    }
+
+
+
+    private static void BuildWebBinFile()
+    {
+        using (FileStream fileStream = new FileStream(DataUtilityManager.m_localRootPath + "WebData.txt", FileMode.Open))
         {
-            Debug.LogError("Keystore文件不存在: " + keystorePath);
-            return;
+            using (StreamReader streamReader = new StreamReader(fileStream))
+            {
+                LuaCallCS.SaveSafeFile(streamReader.ReadToEnd(), Application.streamingAssetsPath + "/WebData.bin");
+            }
         }
 
-        // 设置 keystore 信息
-        PlayerSettings.Android.keystoreName = keystorePath;
-        PlayerSettings.Android.keystorePass = keystorePassword;
-        PlayerSettings.Android.keyaliasName = keyAlias;
-        PlayerSettings.Android.keyaliasPass = keyAliasPassword;
-
-        PackageProject(BuildTarget.Android);
+        AssetDatabase.Refresh();
     }
 
-
-
-    private static void PackageProject(BuildTarget target)
+    private static void PackageProject(BuildTarget target, string locationPathName)
     {
         m_excludedAssets.Clear();
 
@@ -77,7 +81,7 @@ public class CustomBuildScript
         BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions
         {
             scenes = scenes,
-            locationPathName = m_locationPathName,
+            locationPathName = locationPathName,//打包的输出路径
             target = target,
             options = BuildOptions.None
         };
@@ -120,5 +124,95 @@ public class CustomBuildScript
         };
 
         EditorApplication.delayCall();
+    }
+
+    private static void CreateCatalogueFile()
+    {
+        string dir = m_rootPath + "CatalogueFiles";
+
+        if (Directory.Exists(dir))
+        {
+            Directory.Delete(dir, true);
+        }
+
+        DataUtilityManager.InitDirectory(dir);
+
+        using (FileStream fs = new FileStream(dir + "/CatalogueFile.txt", FileMode.Create))
+        {
+            using (StreamWriter sw = new StreamWriter(fs))
+            {
+                SetMd5Files(DataUtilityManager.m_binPath + "/Config/Client");
+                SetMd5Files(DataUtilityManager.m_binPath + "/Atlas");
+                SetMd5Files(m_rootPath + "Lua");
+                SetMd5Files(dir.Replace("CatalogueFiles", "AssetBundles"));
+
+                if (m_filesContent != null && m_filesContent.Count > 0)
+                {
+                    sw.Write(JsonConvert.SerializeObject(m_filesContent));
+                    m_filesContent.Clear();
+                }
+
+                m_filesContent = null;
+            }
+        }
+    }
+
+    private static void SetMd5Files(string directoryPath)
+    {
+        DirectoryInfo folder = new DirectoryInfo(directoryPath);
+
+        //遍历文件
+        foreach (FileInfo nextFile in folder.GetFiles())
+        {
+            string suffix = Path.GetExtension(nextFile.Name);
+
+            if (suffix == ".meta" || nextFile.Name == ".emmyrc.json")
+            {
+                goto A;
+            }
+
+            string fullPath = directoryPath + "/" + nextFile.Name;
+            string savePath = fullPath.Replace(m_rootPath, "");
+
+            if (m_filesContent == null)
+            {
+                m_filesContent = new Dictionary<string, string>();
+            }
+
+            m_filesContent.Add(savePath, Get32MD5(nextFile.OpenText().ReadToEnd()));
+
+        A:;
+        }
+
+        //遍历文件夹
+        foreach (DirectoryInfo nextFolder in folder.GetDirectories())
+        {
+            if (nextFolder.Name == ".idea")
+            {
+                goto B;
+            }
+
+            SetMd5Files(directoryPath + "/" + nextFolder.Name);
+
+        B:;
+        }
+    }
+
+    private static string Get32MD5(string content)
+    {
+        MD5 md5 = MD5.Create();
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        byte[] bytes = md5.ComputeHash(Encoding.UTF8.GetBytes(content)); //该方法的参数也可以传入Stream
+
+        for (int i = 0; i < bytes.Length; i++)
+        {
+            stringBuilder.Append(bytes[i].ToString("X2"));
+        }
+
+        string md5Str = stringBuilder.ToString();
+
+        return md5Str;
     }
 }
