@@ -1,15 +1,15 @@
 ManifestFileVersion: 0
-CRC: 3923901432
+CRC: 1583719927
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c60a32f8562aad3f5bdb3c0ab7bf284d
+    Hash: adbae1f91adb1a7f5ab34ec932342c3d
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 0034942f61fcf9e24a361e52290ae3a7
+    Hash: 7eb2e8c7f3c6adaee1066074d4259dac
   IncrementalBuildHash:
     serializedVersion: 2
-    Hash: c60a32f8562aad3f5bdb3c0ab7bf284d
+    Hash: adbae1f91adb1a7f5ab34ec932342c3d
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -25,18 +25,20 @@ ClassTypes:
 - Class: 111
   Script: {instanceID: 0}
 - Class: 114
-  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-- Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0ec4ce562c7683941b691109b233542e, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 2369704b91392474587ea0e949504195, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 542150549aa0c654e971bdf4e850c68f, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
 - Class: 115
-  Script: {instanceID: 0}
-- Class: 128
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -45,16 +47,36 @@ ClassTypes:
 - Class: 224
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers:
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FaceInfo_Legacy
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.FontAssetCreationSettings
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.KerningTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_Character
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontFeatureTable
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.TMP_FontWeightPair
+- AssemblyName: Unity.TextMeshPro
+  ClassName: TMPro.VertexGradient
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.FaceInfo
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.Glyph
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphMetrics
+- AssemblyName: UnityEngine.TextCoreFontEngineModule
+  ClassName: UnityEngine.TextCore.GlyphRect
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.AnimationTriggers
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.Button/ButtonClickedEvent
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.ColorBlock
-- AssemblyName: UnityEngine.UI
-  ClassName: UnityEngine.UI.FontData
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
 - AssemblyName: UnityEngine.UI

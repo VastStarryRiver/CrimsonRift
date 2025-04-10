@@ -113,20 +113,29 @@ public class Launcher : MonoBehaviour
 
     private void CreateInitScene()
     {
-        GameObject SceneGameObject = Instantiate(Resources.Load<GameObject>("SceneGameObject"), Vector3.zero, Quaternion.identity);
-        GameObject UI_Root = Instantiate(Resources.Load<GameObject>("UI_Root"), Vector3.zero, Quaternion.identity);
+        GameObject SceneGameObject = GameObject.Find("SceneGameObject");
+        GameObject UI_Root = GameObject.Find("UI_Root");
 
-        SceneGameObject.name = "SceneGameObject";
-        UI_Root.name = "UI_Root";
+        if (SceneGameObject == null)
+        {
+            SceneGameObject = Instantiate(Resources.Load<GameObject>("SceneGameObject"), Vector3.zero, Quaternion.identity);
+            UI_Root = Instantiate(Resources.Load<GameObject>("UI_Root"), Vector3.zero, Quaternion.identity);
 
-        DontDestroyOnLoad(SceneGameObject);
-        DontDestroyOnLoad(UI_Root);
+            SceneGameObject.name = "SceneGameObject";
+            UI_Root.name = "UI_Root";
+
+            DontDestroyOnLoad(SceneGameObject);
+            DontDestroyOnLoad(UI_Root);
+        }
 
         m_loadingPanel = Instantiate(Resources.Load<GameObject>("GameLoadingPanel"), UI_Root.transform.Find("Canvas_0/Ts_Panel"));
         m_loadingPanel.name = "GameLoadingPanel";
         m_loadingInfo = m_loadingPanel.GetComponent<GameLoadingPanel>();
 
         m_loadingInfo.SetDes("更新中");
+
+        LuaCallCS.MainSceneCamera.clearFlags = CameraClearFlags.Skybox;
+        LuaCallCS.MainSceneCamera.backgroundColor = Color.white;
     }
 
     private IEnumerator DownloadCatalogueFile()

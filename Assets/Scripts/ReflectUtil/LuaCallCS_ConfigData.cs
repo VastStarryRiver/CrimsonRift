@@ -21,6 +21,19 @@ public static partial class LuaCallCS
         return "";
     }
 
+    public static string GetConfigData(string configName, int id, string name)
+    {
+        string index = id.ToString();
+        var config = ReadSafeFile<Dictionary<string, Dictionary<string, string>>>(DataUtilityManager.m_binPath + "/Config/Client/" + configName + ".bin");
+
+        if (config.ContainsKey(index) && config[index].ContainsKey(name))
+        {
+            return config[index][name];
+        }
+
+        return "";
+    }
+
     public static byte[] ReadFileByteData(string path)
     {
         byte[] byteData = null;
@@ -242,5 +255,24 @@ public static partial class LuaCallCS
         }
 
         return false;
+    }
+
+    public static string GetStringByKey(int id)
+    {
+        string name = LanguageManager.Language;
+        string content = GetConfigData("Language", id, name);
+        return content;
+    }
+
+    public static string GetStringByKey(int id, params object[] param)
+    {
+        string content = GetStringByKey(id);
+
+        if (param.Length > 0)
+        {
+            content = string.Format(content, param);
+        }
+
+        return content;
     }
 }

@@ -1,21 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameLoadingPanel : MonoBehaviour
 {
     private Slider m_sliProgress;
-    private Text m_textDes;
-    private Text m_textProgress;
+    private TextMeshProUGUI m_textDes;
+    private TextMeshProUGUI m_textProgress;
 
 
 
     private void Awake()
     {
-        m_sliProgress = gameObject.transform.Find("Sli_Progress").GetComponent<Slider>();
-        m_textDes = gameObject.transform.Find("Text_Des").GetComponent<Text>();
-        m_textProgress = gameObject.transform.Find("Text_Progress").GetComponent<Text>();
+        m_sliProgress = gameObject.transform.Find("parent/Sli_Progress").GetComponent<Slider>();
+        m_textDes = gameObject.transform.Find("parent/Text_Des").GetComponent<TextMeshProUGUI>();
+        m_textProgress = gameObject.transform.Find("parent/Text_Progress").GetComponent<TextMeshProUGUI>();
     }
 
 
