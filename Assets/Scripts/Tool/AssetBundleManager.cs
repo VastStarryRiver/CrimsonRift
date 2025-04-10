@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public delegate void LoadAssetBundleCallBack(string name, object asset);
 
-public class AssetBundleManager
+public static class AssetBundleManager
 {
     private static Dictionary<string, AssetBundle> m_assetBundles = null;//已经加载的AssetBundle包
     private static AssetBundleManifest m_mainManifest = null;//主AssetBundle的目录文件

@@ -4,7 +4,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class DataUtilityManager
+public static class DataUtilityManager
 {
 #if UNITY_EDITOR
     public static string m_platform = "macOS";

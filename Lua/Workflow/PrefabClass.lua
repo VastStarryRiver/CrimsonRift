@@ -7,7 +7,7 @@ function class:Init(name)
     self.name = name
 
     rawset(self,"Close",function ()
-        LuaCallCS.ClosePrefabPanel(self.name)
+        LuaCallCS.CloseUIPrefabPanel(self.name)
     end)
 end
 

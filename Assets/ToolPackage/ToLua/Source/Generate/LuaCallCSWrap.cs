@@ -55,11 +55,13 @@ public class LuaCallCSWrap
 		L.RegFunction("SaveSafeFile", SaveSafeFile);
 		L.RegFunction("FormatFileByteSize", FormatFileByteSize);
 		L.RegFunction("GetTextureRectByAtlasName", GetTextureRectByAtlasName);
+		L.RegFunction("GetStringByKey", GetStringByKey);
 		L.RegFunction("SendMessage", SendMessage);
 		L.RegFunction("BindReceiveMessage", BindReceiveMessage);
 		L.RegFunction("UnbindReceiveMessage", UnbindReceiveMessage);
 		L.RegVar("MainUICamera", get_MainUICamera, null);
 		L.RegVar("MainUIRoot", get_MainUIRoot, null);
+		L.RegVar("MainSceneCamera", get_MainSceneCamera, null);
 		L.EndStaticLibs();
 	}
 
@@ -1649,13 +1651,30 @@ public class LuaCallCSWrap
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 3);
-			string arg0 = ToLua.CheckString(L, 1);
-			string arg1 = ToLua.CheckString(L, 2);
-			string arg2 = ToLua.CheckString(L, 3);
-			string o = LuaCallCS.GetConfigData(arg0, arg1, arg2);
-			LuaDLL.lua_pushstring(L, o);
-			return 1;
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 3 && TypeChecker.CheckTypes<int, string>(L, 2))
+			{
+				string arg0 = ToLua.CheckString(L, 1);
+				int arg1 = (int)LuaDLL.lua_tonumber(L, 2);
+				string arg2 = ToLua.ToString(L, 3);
+				string o = LuaCallCS.GetConfigData(arg0, arg1, arg2);
+				LuaDLL.lua_pushstring(L, o);
+				return 1;
+			}
+			else if (count == 3 && TypeChecker.CheckTypes<string, string>(L, 2))
+			{
+				string arg0 = ToLua.CheckString(L, 1);
+				string arg1 = ToLua.ToString(L, 2);
+				string arg2 = ToLua.ToString(L, 3);
+				string o = LuaCallCS.GetConfigData(arg0, arg1, arg2);
+				LuaDLL.lua_pushstring(L, o);
+				return 1;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: LuaCallCS.GetConfigData");
+			}
 		}
 		catch (Exception e)
 		{
@@ -1841,6 +1860,39 @@ public class LuaCallCSWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GetStringByKey(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 1 && TypeChecker.CheckTypes<int>(L, 1))
+			{
+				int arg0 = (int)LuaDLL.lua_tonumber(L, 1);
+				string o = LuaCallCS.GetStringByKey(arg0);
+				LuaDLL.lua_pushstring(L, o);
+				return 1;
+			}
+			else if (TypeChecker.CheckTypes<int>(L, 1) && TypeChecker.CheckParamsType<object>(L, 2, count - 1))
+			{
+				int arg0 = (int)LuaDLL.lua_tonumber(L, 1);
+				object[] arg1 = ToLua.ToParamsObject(L, 2, count - 1);
+				string o = LuaCallCS.GetStringByKey(arg0, arg1);
+				LuaDLL.lua_pushstring(L, o);
+				return 1;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: LuaCallCS.GetStringByKey");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int SendMessage(IntPtr L)
 	{
 		try
@@ -1911,6 +1963,20 @@ public class LuaCallCSWrap
 		try
 		{
 			ToLua.PushSealed(L, LuaCallCS.MainUIRoot);
+			return 1;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_MainSceneCamera(IntPtr L)
+	{
+		try
+		{
+			ToLua.PushSealed(L, LuaCallCS.MainSceneCamera);
 			return 1;
 		}
 		catch (Exception e)
