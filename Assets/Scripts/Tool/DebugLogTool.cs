@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using UnityEngine;
+using XLua;
 
 public static class DebugLogTool
 {
@@ -35,9 +36,9 @@ public static class DebugLogTool
             string error = "";
             string luaDebug = "";
 
-            if(LuaManager.Instance.m_luaState != null)
+            if(LuaManager.Instance.m_luaEnv != null)
             {
-                luaDebug = LuaManager.Instance.m_luaState.GetFunction("debug.traceback").Invoke<object, object, object, string>(null, null, null);
+                luaDebug = LuaManager.Instance.m_luaEnv.Global.Get<LuaFunction>("debug.traceback").Call(null, null, null)[0].ToString();
             }
 
             if (!string.IsNullOrEmpty(luaDebug) && luaDebug.Contains("[C]: in function"))

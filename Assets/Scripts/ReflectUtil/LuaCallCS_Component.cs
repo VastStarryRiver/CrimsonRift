@@ -1,7 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using LuaInterface;
+using XLua;
+using TMPro;
 
 
 
@@ -11,7 +11,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj, childPath);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -25,7 +25,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -39,7 +39,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -53,7 +53,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -67,7 +67,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -81,7 +81,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -95,7 +95,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -109,7 +109,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -123,7 +123,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -137,7 +137,7 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj);
 
-        PerfectButton btn = trans.GetComponent<PerfectButton>();
+        UIButton btn = trans.GetComponent<UIButton>();
 
         if (btn == null)
         {
@@ -443,13 +443,13 @@ public static partial class LuaCallCS
     {
         Transform trans = GetTransform(obj, childPath);
 
-        if(trans != null)
+        if (trans != null)
         {
-            Text text = trans.GetComponent<Text>();
+            TextMeshProUGUI textMeshProUGUI = trans.GetComponent<TextMeshProUGUI>();
 
-            if (text != null)
+            if (textMeshProUGUI != null)
             {
-                text.text = des;
+                textMeshProUGUI.text = des;
             }
         }
     }
@@ -458,12 +458,5 @@ public static partial class LuaCallCS
     {
         Transform transform = GetTransform(obj);
         transform.parent = parent;
-    }
-
-    public static SdkMsgManager GetSdkMsgManager()
-    {
-        GameObject obj = GameObject.Find("SdkMsgManager");
-        SdkMsgManager sdkMsgManager = obj?.GetComponent<SdkMsgManager>();
-        return sdkMsgManager;
     }
 }

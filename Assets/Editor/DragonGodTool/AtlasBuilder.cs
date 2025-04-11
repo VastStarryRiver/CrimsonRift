@@ -21,6 +21,8 @@ public class AtlasBuilder
             Directory.Delete(m_atlasRootPath, true);
         }
 
+        DataUtilityManager.InitDirectory(m_atlasRootPath);
+
         if (Directory.Exists(DataUtilityManager.m_binPath + "/Atlas"))
         {
             Directory.Delete(DataUtilityManager.m_binPath + "/Atlas", true);
@@ -113,7 +115,10 @@ public class AtlasBuilder
                 EditorUtility.DisplayProgressBar("设置" + atlasName + "图集的像素数据中......", "进度：" + progress + "/" + progress, 1);
             }
 
-            byte[] bytes = atlas.EncodeToPNG();
+            Texture2D readableTex = new Texture2D(atlas.width, atlas.height, TextureFormat.RGBA32, false);
+            Graphics.CopyTexture(atlas, readableTex);
+
+            byte[] bytes = readableTex.EncodeToPNG();
 
             using (FileStream fileStream = new FileStream(m_atlasRootPath + "/" + atlasName + ".png", FileMode.Create))
             {
@@ -128,7 +133,7 @@ public class AtlasBuilder
             string assetsAtlasPath = m_atlasRootPath.Replace(Application.dataPath, "Assets") + "/" + atlasName + ".png";
 
             //设置图集的ImportSettings
-            SetAtlasImportSettings(assetsAtlasPath, atlasName, atlas, textures, rects);
+            SetAtlasImportSettings(assetsAtlasPath, atlasName, readableTex, textures, rects);
 
             progressIndex++;
 

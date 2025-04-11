@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using LuaInterface;
+using XLua;
 
 
 
@@ -18,9 +18,12 @@ public class PrefabInstance : MonoBehaviour
 
     private void Awake()
     {
-        if (LuaManager.Instance.m_luaClassList.ContainsKey(gameObject.name))
+        LuaFunction getFunc = LuaManager.Instance.UIManager.Get<LuaFunction>("GetUIPanel");
+        LuaTable luaClass = getFunc?.Call(gameObject.name)[0] as LuaTable;
+
+        if (luaClass != null)
         {
-            m_luaTable = LuaManager.Instance.m_luaClassList[gameObject.name];
+            m_luaTable = luaClass;
             m_awakeFunc = (LuaFunction)m_luaTable["Awake"];
             m_onEnableFunc = (LuaFunction)m_luaTable["OnEnable"];
             m_startFunc = (LuaFunction)m_luaTable["Start"];
@@ -64,7 +67,7 @@ public class PrefabInstance : MonoBehaviour
 
     private void OnDisable()
     {
-        if (LuaManager.Instance.m_luaClassList == null || !LuaManager.Instance.m_luaClassList.ContainsKey(gameObject.name))
+        if (m_luaTable == null)
         {
             return;
         }
@@ -77,7 +80,7 @@ public class PrefabInstance : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (LuaManager.Instance.m_luaClassList == null || !LuaManager.Instance.m_luaClassList.ContainsKey(gameObject.name))
+        if (m_luaTable == null)
         {
             return;
         }
@@ -87,10 +90,8 @@ public class PrefabInstance : MonoBehaviour
             m_onDestroyFunc.Call();
         }
 
-        if (LuaManager.Instance.m_luaClassList.ContainsKey(gameObject.name))
-        {
-            LuaManager.Instance.m_luaClassList.Remove(gameObject.name);
-        }
+        LuaFunction removeFunc = LuaManager.Instance.UIManager?.Get<LuaFunction>("RemoveUIPanel");
+        removeFunc?.Call(gameObject.name);
     }
 
 

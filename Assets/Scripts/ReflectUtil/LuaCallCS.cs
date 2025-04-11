@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-using LuaInterface;
+using XLua;
 
 
 
@@ -10,7 +10,7 @@ public static partial class LuaCallCS
     {
         get
         {
-            return GameObject.Find("UI_Root/UI_Camera").GetComponent<Camera>();
+            return GameObject.Find("UI_Root/Canvas_0/UI_Camera").GetComponent<Camera>();
         }
     }
 
@@ -19,6 +19,14 @@ public static partial class LuaCallCS
         get
         {
             return GameObject.Find("UI_Root").GetComponent<RectTransform>();
+        }
+    }
+
+    public static Camera MainSceneCamera
+    {
+        get
+        {
+            return GameObject.Find("SceneGameObject/Main Camera").GetComponent<Camera>();
         }
     }
 
@@ -69,59 +77,53 @@ public static partial class LuaCallCS
         return null;
     }
 
-    public static LuaTable OpenUIPrefabPanel(string prefabPath, string luaPath, int layer)
+    public static void OpenUIPrefabPanel(string prefabPath, string luaPath, int layer)
     {
-        LuaTable luaClass;
-
         int startIndex = prefabPath.LastIndexOf("/") + 1;
         string prefabName = prefabPath.Substring(startIndex, prefabPath.Length - startIndex);
 
-        if (LuaManager.Instance.m_luaClassList.ContainsKey(prefabName))
-        {
-            luaClass = LuaManager.Instance.m_luaClassList[prefabName];
-        }
-        else
-        {
-            luaClass = LuaManager.Instance.m_luaState.DoFile<LuaTable>(luaPath);
+        LuaFunction getFunc = LuaManager.Instance.UIManager.Get<LuaFunction>("GetUIPanel");
+        LuaTable luaClass = getFunc?.Call(prefabName)[0] as LuaTable;
 
-            LuaManager.Instance.m_luaClassList[prefabName] = luaClass;
+        if (luaClass == null)
+        {
+            LuaManager.Instance.m_luaEnv.DoString("require('" + luaPath + "')");
 
             GameObject obj = CreateUIGameObject(prefabPath, prefabName, layer);
 
             AddComponent(obj, "", "PrefabInstance");
         }
 
-        return luaClass;
+        getFunc?.Dispose();
     }
 
-    public static LuaTable OpenUIPrefabPanel(GameObject prefab, string luaPath)
+    public static void OpenUIPrefabPanel(GameObject prefab, string luaPath)
     {
-        LuaTable luaClass;
-
         string prefabName = prefab.name;
 
-        if (LuaManager.Instance.m_luaClassList.ContainsKey(prefabName))
-        {
-            luaClass = LuaManager.Instance.m_luaClassList[prefabName];
-        }
-        else
-        {
-            luaClass = LuaManager.Instance.m_luaState.DoFile<LuaTable>(luaPath);
+        LuaFunction getFunc = LuaManager.Instance.UIManager.Get<LuaFunction>("GetUIPanel");
+        LuaTable luaClass = getFunc?.Call(prefabName)[0] as LuaTable;
 
-            LuaManager.Instance.m_luaClassList[prefabName] = luaClass;
-
+        if (luaClass == null)
+        {
+            LuaManager.Instance.m_luaEnv.DoString("require('" + luaPath + "')");
             AddComponent(prefab, "", "PrefabInstance");
         }
 
-        return luaClass;
+        getFunc?.Dispose();
     }
 
     public static void CloseUIPrefabPanel(string prefabName)
     {
-        if (LuaManager.Instance.m_luaClassList.ContainsKey(prefabName))
+        LuaFunction getFunc = LuaManager.Instance.UIManager.Get<LuaFunction>("GetUIPanel");
+        LuaTable luaClass = getFunc?.Call(prefabName)[0] as LuaTable;
+
+        if (luaClass != null)
         {
-            GameObject.Destroy((GameObject)LuaManager.Instance.m_luaClassList[prefabName]["gameObject"]);
+            GameObject.Destroy((GameObject)luaClass["gameObject"]);
         }
+
+        getFunc?.Dispose();
     }
 
     public static GameObject CreateUIGameObject(string prefabPath, string prefabName, int layer = -1, UnityEngine.Object parent = null)

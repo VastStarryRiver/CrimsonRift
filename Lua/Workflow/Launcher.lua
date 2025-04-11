@@ -1,1 +1,1 @@
-LuaCallCS.OpenUIPrefabPanel("UI/Workflow/LoginPanel", "UI/LoginPanel.lua", 0)
+LuaCallCS.OpenUIPrefabPanel("UI/Workflow/LoginPanel", "UI/LoginPanel", 0)

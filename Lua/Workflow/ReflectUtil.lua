@@ -1,8 +1,8 @@
-Ease = require("DG.Tweening.Ease")
-LoopType = require("DG.Tweening.LoopType")
-PathType = require("DG.Tweening.PathType")
-LuaCallCS = require("LuaCallCS")
-DataUtilityManager = require("DataUtilityManager")
-DebugLogTool = require("DebugLogTool")
-WrapMode = require("UnityEngine.WrapMode")
-SdkMsgManager = LuaCallCS.GetSdkMsgManager()
+Ease = CS.DG.Tweening.Ease
+LoopType = CS.DG.Tweening.LoopType
+PathType = CS.DG.Tweening.PathType
+WrapMode = CS.UnityEngine.WrapMode
+LuaCallCS = CS.LuaCallCS
+LanguageManager = CS.LanguageManager
+DataUtilityManager = CS.DataUtilityManager
+DebugLogTool = CS.DebugLogTool

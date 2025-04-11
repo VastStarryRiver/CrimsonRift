@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 1592989298
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bb81056d6a02eb7063f16f064204f5f6
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9c5c2bf181d9c166e27af67e2a391d17
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: bb81056d6a02eb7063f16f064204f5f6
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/UpdateAssets/Atlas/Atlas01.png
+Dependencies: []

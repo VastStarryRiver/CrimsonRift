@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 591778646
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c5530d0d6982ed6517f7dead2ef04690
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9c5c2bf181d9c166e27af67e2a391d17
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: c5530d0d6982ed6517f7dead2ef04690
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/UpdateAssets/Atlas/bg_hghg_wdtx3.png
+Dependencies: []

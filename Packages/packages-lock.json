@@ -1,29 +1,24 @@
 {
   "dependencies": {
-    "com.google.external-dependency-manager": {
-      "version": "1.2.183",
+    "cn.tuanjie.minigame.host": {
+      "version": "1.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://package.openupm.com"
+      "url": "https://packages.tuanjie.cn"
     },
-    "com.taptap.sdk.core": {
-      "version": "https://github.com/taptap/TapSDKCore-Unity.git#4.4.3",
+    "com.qq.weixin.minigame": {
+      "version": "https://gitee.com/wechat-minigame/minigame-tuanjie-transform-sdk.git",
       "depth": 0,
       "source": "git",
-      "dependencies": {
-        "com.google.external-dependency-manager": "1.2.179"
-      },
-      "hash": "d8c6926ec5dd89c3e35d2bc59c36de674151aff4"
+      "dependencies": {},
+      "hash": "2c858e5dd907faa51fe24dda37ef8a313fd70797"
     },
-    "com.taptap.sdk.login": {
-      "version": "https://github.com/taptap/TapSDKLogin-Unity.git#4.4.3",
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
       "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.taptap.sdk.core": "4.4.3"
-      },
-      "hash": "b8400a427c89251f42930a4dad842346c3ad8a72"
+      "source": "builtin",
+      "dependencies": {}
     },
     "com.unity.cinemachine": {
       "version": "2.10.3",
@@ -32,28 +27,28 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.31"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.collab-proxy": {
-      "version": "2.6.0",
+      "version": "2.7.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.editorcoroutines": {
       "version": "1.0.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.feature.development": {
       "version": "1.0.1",
@@ -76,7 +71,7 @@
       "dependencies": {
         "com.unity.ext.nunit": "1.0.6"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.ide.visualstudio": {
       "version": "2.0.22",
@@ -85,35 +80,35 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.9"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.ide.vscode": {
       "version": "1.2.5",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.performance.profile-analyzer": {
       "version": "1.2.2",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.settings-manager": {
       "version": "2.0.1",
       "depth": 2,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.test-framework": {
       "version": "1.1.33",
@@ -124,7 +119,7 @@
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.testtools.codecoverage": {
       "version": "1.2.6",
@@ -134,7 +129,7 @@
         "com.unity.test-framework": "1.0.16",
         "com.unity.settings-manager": "1.0.1"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.textmeshpro": {
       "version": "3.0.7",
@@ -143,7 +138,7 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.timeline": {
       "version": "1.7.6",
@@ -155,7 +150,7 @@
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.ugui": {
       "version": "1.0.0",
@@ -174,7 +169,7 @@
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
@@ -198,7 +193,10 @@
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
-      "dependencies": {}
+      "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
+        "com.unity.modules.animation": "1.0.0"
+      }
     },
     "com.unity.modules.audio": {
       "version": "1.0.0",
@@ -230,6 +228,12 @@
       "dependencies": {}
     },
     "com.unity.modules.imgui": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.modules.infinity": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
@@ -313,12 +317,6 @@
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       }
-    },
-    "com.unity.modules.umbra": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {}
     },
     "com.unity.modules.unityanalytics": {
       "version": "1.0.0",

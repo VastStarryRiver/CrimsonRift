@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
-using LuaInterface;
+using XLua;
 
 
 
@@ -120,7 +120,7 @@ public class MessageNetManager : Singleton<MessageNetManager>
 
             if (messageCallBacks.ContainsKey(strings[0]) && messageCallBacks[strings[0]].Count > 0)
             {
-                LuaTable luaTable = LuaManager.Instance.m_luaState.DoString<LuaTable>(strings[1]);
+                LuaTable luaTable = LuaManager.Instance.m_luaEnv.DoString("require('" + strings[1] + "')")[0] as LuaTable;
 
                 foreach (LuaFunction luaFunction in messageCallBacks[strings[0]])
                 {

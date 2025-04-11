@@ -1,48 +1,52 @@
 ﻿using UnityEngine;
-using LuaInterface;
+using XLua;
 using System.Collections.Generic;
+using System.IO;
 
 
 
 public class LuaManager : Singleton<LuaManager>
 {
-    public LuaState m_luaState = null;//Lua的虚拟机
-    public Dictionary<string, LuaTable> m_luaClassList;//所有预制体对应的lua脚本
+    public LuaEnv m_luaEnv = null;//Lua的虚拟机
+
+    public LuaTable UIManager
+    {
+        get
+        {
+            if(m_luaEnv != null)
+            {
+                return m_luaEnv.Global.Get<LuaTable>("UIManager");
+            }
+            
+            return null;
+        }
+    }
 
 
 
     public void Play()
     {
-        if (m_luaState != null)
+        if (m_luaEnv != null)
         {
             return;
         }
 
-        m_luaClassList = new Dictionary<string, LuaTable>();
+        m_luaEnv = new LuaEnv();//虚拟机初始化
 
-        new LuaResLoader();//加载Lua文件
+        m_luaEnv.AddLoader((ref string path1) => {
+            string path2 = $"{DataUtilityManager.m_localRootPath}Lua/{path1}.lua";
+            return File.Exists(path2) ? File.ReadAllBytes(path2) : null;
+        });
 
-        m_luaState = new LuaState();//虚拟机初始化
-
-        m_luaState.Start();//开始虚拟机
-
-        LuaBinder.Bind(m_luaState);//绑定虚拟机
-
-        m_luaState.DoFile("Workflow/Main.lua");//任意已经添加的搜索路径下的完整lua路径
+        m_luaEnv.DoString("require('Workflow/Main')");//任意已经添加的搜索路径下的完整lua路径
     }
 
     public void Stop()
     {
-        if (m_luaState != null)
+        if (m_luaEnv != null)
         {
-            m_luaState.Dispose();
-            m_luaState = null;
-        }
-
-        if(m_luaClassList != null)
-        {
-            m_luaClassList.Clear();
-            m_luaClassList = null;
+            m_luaEnv.Dispose();
+            m_luaEnv = null;
         }
     }
 

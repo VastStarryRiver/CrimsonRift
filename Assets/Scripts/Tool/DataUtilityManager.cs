@@ -4,14 +4,13 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class DataUtilityManager
+public static class DataUtilityManager
 {
-#if UNITY_EDITOR || UNITY_STANDALONE_WIN
-    public static string m_platform = "Windows";//当前平台
+#if UNITY_EDITOR
+    public static string m_platform = "Windows";
     public static string m_localRootPath = Application.streamingAssetsPath.Replace("Assets/StreamingAssets", "");//本地数据根目录
-
-#elif UNITY_ANDROID
-    public static string m_platform = "Android";
+#else
+    public static string m_platform = "WeixinMiniGame";
     public static string m_localRootPath = Application.persistentDataPath + "/";
 #endif
 

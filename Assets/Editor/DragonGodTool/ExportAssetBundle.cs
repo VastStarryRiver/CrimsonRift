@@ -10,32 +10,16 @@ public class ExportAssetBundle
 
 
 
-    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_Android", false, 1)]
-    public static void BuildAssetBundles_Android()
+    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_WeixinMiniGame", false, 1)]
+    public static void BuildAssetBundles_WeixinMiniGame()
     {
-        BuildAssetBundles(m_rootPath + "AssetBundles/Android", BuildTarget.Android);
-        RenameMainAssetBundleFile(m_rootPath + "AssetBundles/Android/Android");
+        BuildAssetBundles(m_rootPath + "AssetBundles/WeixinMiniGame", BuildTarget.WeixinMiniGame);
     }
 
-    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_Windows", false, 3)]
+    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_Windows", false, 2)]
     public static void BuildAssetBundles_Windows()
     {
         BuildAssetBundles(m_rootPath + "AssetBundles/Windows", BuildTarget.StandaloneWindows64);
-        RenameMainAssetBundleFile(m_rootPath + "AssetBundles/Windows/Windows");
-    }
-
-    [MenuItem("GodDragonTool/AssetBundles/BuildWebBinFile", false, 4)]
-    public static void BuildWebBinFile()
-    {
-        using (FileStream fileStream = new FileStream(DataUtilityManager.m_localRootPath + "WebData.txt", FileMode.Open))
-        {
-            using (StreamReader streamReader = new StreamReader(fileStream))
-            {
-                LuaCallCS.SaveSafeFile(streamReader.ReadToEnd(), Application.streamingAssetsPath + "/WebData.bin");
-            }
-        }
-
-        AssetDatabase.Refresh();
     }
 
 
@@ -60,6 +44,11 @@ public class ExportAssetBundle
         SetAudioImportSettings();
 
         BuildPipeline.BuildAssetBundles(dir, BuildAssetBundleOptions.None, buildTarget); //把所有设置了AssetBundle信息的资源都打包
+
+        string mainBundleName = dir.Replace(m_rootPath + "AssetBundles/", "");
+        RenameMainAssetBundleFile(dir + "/" + mainBundleName);
+
+        DeleteTempAssetBundleFile(dir);
     }
 
     private static void RenameMainAssetBundleFile(string mainBundlePath)
@@ -69,18 +58,18 @@ public class ExportAssetBundle
             string newBundlePath = mainBundlePath + ".mainbundle";
             File.Move(mainBundlePath, newBundlePath);
         }
+    }
 
-        string platform = Path.GetFileName(mainBundlePath);
-        string tempFile = mainBundlePath.Substring(0, mainBundlePath.LastIndexOf(platform)) + "tempAssetBundle";
-
-        if (File.Exists(tempFile))
+    private static void DeleteTempAssetBundleFile(string dir)
+    {
+        if (File.Exists(dir + "/tempexcludedassetbundle.temp"))
         {
-            File.Delete(tempFile);
+            File.Delete(dir + "/tempexcludedassetbundle.temp");
         }
 
-        if (File.Exists(tempFile + ".manifest"))
+        if (File.Exists(dir + "/tempexcludedassetbundle.temp.manifest"))
         {
-            File.Delete(tempFile + ".manifest");
+            File.Delete(dir + "/tempexcludedassetbundle.temp.manifest");
         }
     }
 

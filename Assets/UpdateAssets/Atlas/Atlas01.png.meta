@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 66b7366c955d22d47939d0d87c78a0f7
+guid: DCwdti+lBSmY9++Ft3Fz5l6aCTmy4qH6qgoqN5uMohGBHuT12oVolAU=
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -22,6 +22,9 @@ TextureImporter:
     normalMapFilter: 0
     flipGreenChannel: 0
   isReadable: 0
+  webStreaming: 0
+  priorityLevel: 0
+  uploadedMode: 2
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -70,6 +73,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
+    maxPlaceholderSize: 32
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -83,6 +87,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
+    maxPlaceholderSize: 32
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -94,8 +99,9 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: iPhone
+    buildTarget: Server
     maxTextureSize: 2048
+    maxPlaceholderSize: 32
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -107,8 +113,37 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: OpenHarmony
     maxTextureSize: 2048
+    maxPlaceholderSize: 32
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    maxPlaceholderSize: 32
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WeixinMiniGame
+    maxTextureSize: 2048
+    maxPlaceholderSize: 32
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -252,8 +287,8 @@ TextureImporter:
       name: 01_btn_Lan3
       rect:
         serializedVersion: 2
-        x: 110
-        y: 95
+        x: 0
+        y: 141
         width: 108
         height: 44
       alignment: 0
@@ -270,32 +305,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 01_oth_BeiBao002
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 141
-        width: 104
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a3f3955e7a96cad0800000000000000
-      internalID: -2682286660660235352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: 01_oth_BiaoTiZS030
       rect:
         serializedVersion: 2
-        x: 106
-        y: 207
+        x: 175
+        y: 95
         width: 59
         height: 12
       alignment: 0
@@ -315,8 +329,8 @@ TextureImporter:
       name: 01_oth_ChengYuan
       rect:
         serializedVersion: 2
-        x: 221
-        y: 193
+        x: 66
+        y: 213
         width: 30
         height: 30
       alignment: 0
@@ -336,8 +350,8 @@ TextureImporter:
       name: 01_oth_D3Arrowright
       rect:
         serializedVersion: 2
-        x: 172
-        y: 193
+        x: 175
+        y: 109
         width: 47
         height: 26
       alignment: 0
@@ -357,8 +371,8 @@ TextureImporter:
       name: 01_oth_D3dian
       rect:
         serializedVersion: 2
-        x: 220
-        y: 121
+        x: 212
+        y: 147
         width: 16
         height: 16
       alignment: 0
@@ -399,8 +413,8 @@ TextureImporter:
       name: 01_oth_D3QiPao2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 390
+        x: 156
+        y: 175
         width: 23
         height: 54
       alignment: 0
@@ -420,8 +434,8 @@ TextureImporter:
       name: 01_oth_D3tuodong
       rect:
         serializedVersion: 2
-        x: 0
-        y: 334
+        x: 156
+        y: 147
         width: 26
         height: 26
       alignment: 0
@@ -441,8 +455,8 @@ TextureImporter:
       name: 01_oth_DH6_AnXing
       rect:
         serializedVersion: 2
-        x: 106
-        y: 141
+        x: 0
+        y: 187
         width: 64
         height: 64
       alignment: 0
@@ -462,8 +476,8 @@ TextureImporter:
       name: 01_oth_DH6_BiaoTiDian
       rect:
         serializedVersion: 2
-        x: 238
-        y: 121
+        x: 230
+        y: 147
         width: 16
         height: 16
       alignment: 0
@@ -567,8 +581,8 @@ TextureImporter:
       name: 01_oth_DH6_JianTou2
       rect:
         serializedVersion: 2
-        x: 172
-        y: 141
+        x: 110
+        y: 95
         width: 63
         height: 50
       alignment: 0
@@ -588,8 +602,8 @@ TextureImporter:
       name: 01_oth_DH6_JinDuTiao01
       rect:
         serializedVersion: 2
-        x: 220
-        y: 95
+        x: 66
+        y: 187
         width: 31
         height: 24
       alignment: 0
@@ -609,8 +623,8 @@ TextureImporter:
       name: 01_oth_DH6_JinDuTiao02
       rect:
         serializedVersion: 2
-        x: 106
-        y: 221
+        x: 110
+        y: 204
         width: 27
         height: 20
       alignment: 0
@@ -630,8 +644,8 @@ TextureImporter:
       name: 01_oth_DH6_JinDuTiao03
       rect:
         serializedVersion: 2
-        x: 135
-        y: 221
+        x: 110
+        y: 226
         width: 27
         height: 20
       alignment: 0
@@ -651,8 +665,8 @@ TextureImporter:
       name: 01_oth_DH6_SaoDangZhuangTai1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 274
+        x: 224
+        y: 109
         width: 28
         height: 28
       alignment: 0
@@ -672,8 +686,8 @@ TextureImporter:
       name: 01_oth_DH6_SaoDangZhuangTai2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 304
+        x: 110
+        y: 174
         width: 28
         height: 28
       alignment: 0
@@ -714,8 +728,8 @@ TextureImporter:
       name: 01_oth_DH6_TanChuangJianTou
       rect:
         serializedVersion: 2
-        x: 0
-        y: 247
+        x: 110
+        y: 147
         width: 44
         height: 25
       alignment: 0
@@ -735,8 +749,8 @@ TextureImporter:
       name: 01_oth_DH6_TanHao
       rect:
         serializedVersion: 2
-        x: 0
-        y: 362
+        x: 184
+        y: 147
         width: 26
         height: 26
       alignment: 0
@@ -791,7 +805,6 @@ TextureImporter:
       01_btn_Lan1: -3335885414052846757
       01_btn_Lan2: 6287887340278593672
       01_btn_Lan3: 49420214274040871
-      01_oth_BeiBao002: -2682286660660235352
       01_oth_BiaoTiZS030: 5678449982346463868
       01_oth_ChengYuan: 3455303807647017307
       01_oth_D3Arrowright: -6179198955296756672

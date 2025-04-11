@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 4182496540
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8bd2af1385d221f8d926cbdd48d0ab9f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9a9938a0bf7ee6264c60e498a54ec225
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 8bd2af1385d221f8d926cbdd48d0ab9f
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/UpdateAssets/Animtion/Play.anim
+Dependencies: []

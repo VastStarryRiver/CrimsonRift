@@ -1,19 +1,86 @@
 fileFormatVersion: 2
-guid: 8b230d1754501cc478267c42cb8ae51d
+guid: DHoX5Cz/Wi5mqNcJvbZYAQGhPjPVKQMOkQX2Dt45eK65ahN1npYFBXk=
 PluginImporter:
-  serializedVersion: 1
+  externalObjects: {}
+  serializedVersion: 2
   iconMap: {}
   executionOrder: {}
+  defineConstraints: []
   isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
   platformData:
-    Any:
-      enabled: 1
-      settings: {}
-    Editor:
+  - first:
+      : Any
+    second:
       enabled: 0
       settings:
+        Exclude Editor: 0
+        Exclude Linux64: 0
+        Exclude OSXUniversal: 0
+        Exclude OpenHarmony: 0
+        Exclude WebGL: 0
+        Exclude WeixinMiniGame: 0
+        Exclude Win: 0
+        Exclude Win64: 0
+  - first:
+      Any: 
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 1
+      settings:
+        CPU: AnyCPU
         DefaultValueInitialized: true
-    WindowsStoreApps:
+        OS: AnyOS
+  - first:
+      OpenHarmony: OpenHarmony
+    second:
+      enabled: 1
+      settings:
+        CPU: ARMv7
+        OpenHarmonySharedLibraryType: Executable
+  - first:
+      Standalone: Linux64
+    second:
+      enabled: 1
+      settings:
+        CPU: None
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 1
+      settings:
+        CPU: None
+  - first:
+      Standalone: Win
+    second:
+      enabled: 1
+      settings:
+        CPU: None
+  - first:
+      Standalone: Win64
+    second:
+      enabled: 1
+      settings:
+        CPU: None
+  - first:
+      WebGL: WebGL
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      WeixinMiniGame: WeixinMiniGame
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
       enabled: 0
       settings:
         CPU: AnyCPU

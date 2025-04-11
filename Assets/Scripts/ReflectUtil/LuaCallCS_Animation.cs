@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using LuaInterface;
+using XLua;
+using TMPro;
 
 public static partial class LuaCallCS
 {
@@ -38,7 +39,7 @@ public static partial class LuaCallCS
 
                 if (luaFunc != null)
                 {
-                    tweener.OnComplete(luaFunc.Call);
+                    tweener.OnComplete(() => { luaFunc?.Call(); });
                 }
             }
             else
@@ -83,7 +84,7 @@ public static partial class LuaCallCS
 
                 if (luaFunc != null)
                 {
-                    tweener.OnComplete(luaFunc.Call);
+                    tweener.OnComplete(() => { luaFunc?.Call(); });
                 }
             }
             else
@@ -128,7 +129,7 @@ public static partial class LuaCallCS
 
                 if (luaFunc != null)
                 {
-                    tweener.OnComplete(luaFunc.Call);
+                    tweener.OnComplete(() => { luaFunc?.Call(); });
                 }
             }
             else
@@ -175,7 +176,7 @@ public static partial class LuaCallCS
 
                 if (luaFunc != null)
                 {
-                    tweener.OnComplete(luaFunc.Call);
+                    tweener.OnComplete(() => { luaFunc?.Call(); });
                 }
             }
             else
@@ -210,7 +211,7 @@ public static partial class LuaCallCS
 
                 if (luaFunc != null)
                 {
-                    tweener.OnComplete(luaFunc.Call);
+                    tweener.OnComplete(() => { luaFunc?.Call(); });
                 }
             }
             else
@@ -221,7 +222,7 @@ public static partial class LuaCallCS
             return tweener;
         }
 
-        Text text = trans.GetComponent<Text>();
+        TextMeshProUGUI text = trans.GetComponent<TextMeshProUGUI>();
 
         if (text != null)
         {
@@ -245,7 +246,7 @@ public static partial class LuaCallCS
 
                 if (luaFunc != null)
                 {
-                    tweener.OnComplete(luaFunc.Call);
+                    tweener.OnComplete(() => { luaFunc?.Call(); });
                 }
             }
             else
@@ -315,7 +316,7 @@ public static partial class LuaCallCS
 
                 if (luaFunc != null)
                 {
-                    tweener.OnComplete(luaFunc.Call);
+                    tweener.OnComplete(() => { luaFunc?.Call(); });
                 }
             }
             else
