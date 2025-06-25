@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using LuaInterface;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 
 
@@ -79,6 +81,41 @@ public class CoroutineManager : MonoBehaviour
             {
                 callBack.Call();
             }
+        }
+    }
+
+    public void InvokeRestartGame()
+    {
+        StartCoroutine(RestartGame());
+    }
+
+    private IEnumerator RestartGame()
+    {
+        LuaCallCS.MainSceneCamera.clearFlags = CameraClearFlags.SolidColor;
+        LuaCallCS.MainSceneCamera.backgroundColor = Color.black;
+
+        List<string> list = new List<string>();
+
+        foreach (var item in LuaManager.Instance.m_luaClassList)
+        {
+            list.Add(item.Key);
+        }
+
+        if (list.Count > 0)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                LuaCallCS.CloseUIPrefabPanel(list[i]);
+            }
+        }
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+
+        while (!asyncLoad.isDone)
+        {
+            float progress = Mathf.Clamp01(asyncLoad.progress / 0.9f);
+            Debug.Log("加载进度: " + (progress * 100) + "%");
+            yield return null;
         }
     }
 }

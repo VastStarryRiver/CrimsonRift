@@ -124,7 +124,7 @@ public static class CustomSettings
 
         //添加需要映射的自定义脚本
         _GT(typeof(LuaCallCS)),
-        _GT(typeof(PerfectButton)),
+        _GT(typeof(UIButton)),
         _GT(typeof(Ease)),
         _GT(typeof(LoopType)),
         _GT(typeof(PathType)),
@@ -137,6 +137,7 @@ public static class CustomSettings
         _GT(typeof(LoopScrollList)),
         _GT(typeof(PolygonImage)),
         _GT(typeof(UIMask)),
+        _GT(typeof(LanguageManager)),
     };
 
     public static List<Type> dynamicList = new List<Type>()

@@ -105,6 +105,8 @@ public static class ToLuaMenu
 
     static ToLuaMenu()
     {
+        beCheck = false;
+
         string dir = CustomSettings.warpSaveDir;
         string[] files = Directory.GetFiles(dir, "*.cs", SearchOption.TopDirectoryOnly);
 
@@ -895,24 +897,7 @@ public static class ToLuaMenu
         beAutoGen = false;   
     }
 
-    //[MenuItem("Lua/Generate All", false, 5)]
-    static void GenLuaAll()
-    {
-        if (EditorApplication.isCompiling)
-        {
-            EditorUtility.DisplayDialog("警告", "请等待编辑器完成编译再执行此功能", "确定");
-            return;
-        }
-
-        beAutoGen = true;
-        GenLuaDelegates();
-        AssetDatabase.Refresh();
-        GenerateClassWraps();
-        GenLuaBinder();
-        beAutoGen = false;
-    }
-
-    [MenuItem("GodDragonTool/Lua/Clear wrap files")]
+    [MenuItem("GodDragonTool/ToLua/Clear Generated Code")]
     static void ClearLuaWraps()
     {
         string[] files = Directory.GetFiles(CustomSettings.warpSaveDir, "*.cs", SearchOption.TopDirectoryOnly);
@@ -949,6 +934,17 @@ public static class ToLuaMenu
         }
 
         AssetDatabase.Refresh();
+    }
+
+    [MenuItem("GodDragonTool/ToLua/Generate Code")]
+    static void GenerateLuaWraps()
+    {
+        beAutoGen = true;
+        GenLuaDelegates();
+        GenerateClassWraps();
+        GenLuaBinder();
+        AssetDatabase.Refresh();
+        beAutoGen = false;
     }
 
     static void CopyLuaBytesFiles(string sourceDir, string destDir, bool appendext = true, string searchPattern = "*.lua", SearchOption option = SearchOption.AllDirectories)

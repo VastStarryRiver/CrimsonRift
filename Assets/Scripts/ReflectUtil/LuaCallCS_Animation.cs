@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using DG.Tweening;
 using LuaInterface;
+using TMPro;
 
 public static partial class LuaCallCS
 {
@@ -221,7 +222,7 @@ public static partial class LuaCallCS
             return tweener;
         }
 
-        Text text = trans.GetComponent<Text>();
+        TextMeshProUGUI text = trans.GetComponent<TextMeshProUGUI>();
 
         if (text != null)
         {

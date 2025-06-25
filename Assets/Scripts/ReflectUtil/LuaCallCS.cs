@@ -10,7 +10,7 @@ public static partial class LuaCallCS
     {
         get
         {
-            return GameObject.Find("UI_Root/UI_Camera").GetComponent<Camera>();
+            return GameObject.Find("UI_Root/Canvas_0/UI_Camera").GetComponent<Camera>();
         }
     }
 
@@ -19,6 +19,14 @@ public static partial class LuaCallCS
         get
         {
             return GameObject.Find("UI_Root").GetComponent<RectTransform>();
+        }
+    }
+
+    public static Camera MainSceneCamera
+    {
+        get
+        {
+            return GameObject.Find("SceneGameObject/Main Camera").GetComponent<Camera>();
         }
     }
 

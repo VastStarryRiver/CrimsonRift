@@ -17,25 +17,11 @@ public class ExportAssetBundle
         RenameMainAssetBundleFile(m_rootPath + "AssetBundles/Android/Android");
     }
 
-    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_Windows", false, 3)]
+    [MenuItem("GodDragonTool/AssetBundles/BuildAssetBundles_Windows", false, 2)]
     public static void BuildAssetBundles_Windows()
     {
         BuildAssetBundles(m_rootPath + "AssetBundles/Windows", BuildTarget.StandaloneWindows64);
         RenameMainAssetBundleFile(m_rootPath + "AssetBundles/Windows/Windows");
-    }
-
-    [MenuItem("GodDragonTool/AssetBundles/BuildWebBinFile", false, 4)]
-    public static void BuildWebBinFile()
-    {
-        using (FileStream fileStream = new FileStream(DataUtilityManager.m_localRootPath + "WebData.txt", FileMode.Open))
-        {
-            using (StreamReader streamReader = new StreamReader(fileStream))
-            {
-                LuaCallCS.SaveSafeFile(streamReader.ReadToEnd(), Application.streamingAssetsPath + "/WebData.bin");
-            }
-        }
-
-        AssetDatabase.Refresh();
     }
 
 

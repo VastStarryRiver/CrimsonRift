@@ -12,7 +12,7 @@ public static class LuaBinder
 		LuaInterface_DebuggerWrap.Register(L);
 		LuaProfilerWrap.Register(L);
 		LuaCallCSWrap.Register(L);
-		PerfectButtonWrap.Register(L);
+		UIButtonWrap.Register(L);
 		PrefabInstanceWrap.Register(L);
 		SdkMsgManagerWrap.Register(L);
 		DataUtilityManagerWrap.Register(L);
@@ -22,6 +22,7 @@ public static class LuaBinder
 		LoopScrollListWrap.Register(L);
 		PolygonImageWrap.Register(L);
 		UIMaskWrap.Register(L);
+		LanguageManagerWrap.Register(L);
 		L.BeginModule("LuaInterface");
 		LuaInterface_LuaInjectionStationWrap.Register(L);
 		LuaInterface_InjectTypeWrap.Register(L);

@@ -6,42 +6,16 @@ public class DataUtilityManagerWrap
 {
 	public static void Register(LuaState L)
 	{
-		L.BeginClass(typeof(DataUtilityManager), typeof(System.Object));
+		L.BeginStaticLibs("DataUtilityManager");
 		L.RegFunction("InitDirectory", InitDirectory);
 		L.RegFunction("SetWebQuestData", SetWebQuestData);
-		L.RegFunction("New", _CreateDataUtilityManager);
-		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("m_platform", get_m_platform, set_m_platform);
 		L.RegVar("m_localRootPath", get_m_localRootPath, set_m_localRootPath);
 		L.RegVar("m_binPath", get_m_binPath, set_m_binPath);
 		L.RegVar("WebRootPath", get_WebRootPath, null);
 		L.RegVar("WebIpv4Str", get_WebIpv4Str, null);
 		L.RegVar("WebPortInt", get_WebPortInt, null);
-		L.EndClass();
-	}
-
-	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int _CreateDataUtilityManager(IntPtr L)
-	{
-		try
-		{
-			int count = LuaDLL.lua_gettop(L);
-
-			if (count == 0)
-			{
-				DataUtilityManager obj = new DataUtilityManager();
-				ToLua.PushObject(L, obj);
-				return 1;
-			}
-			else
-			{
-				return LuaDLL.luaL_throw(L, "invalid arguments to ctor method: DataUtilityManager.New");
-			}
-		}
-		catch (Exception e)
-		{
-			return LuaDLL.toluaL_exception(L, e);
-		}
+		L.EndStaticLibs();
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
