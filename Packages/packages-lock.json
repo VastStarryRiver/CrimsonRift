@@ -1,36 +1,36 @@
 {
   "dependencies": {
-    "cn.tuanjie.minigame.host": {
-      "version": "1.0.9",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.tuanjie.cn"
-    },
-    "com.qq.weixin.minigame": {
-      "version": "https://gitee.com/wechat-minigame/minigame-tuanjie-transform-sdk.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "2c858e5dd907faa51fe24dda37ef8a313fd70797"
-    },
-    "com.unity.2d.sprite": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {}
-    },
-    "com.unity.cinemachine": {
-      "version": "2.10.3",
+    "cn.tuanjie.minihost": {
+      "version": "1.0.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.test-framework": "1.1.31"
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
       },
       "url": "https://packages.tuanjie.cn"
     },
+    "com.bytedance.starksdk": {
+      "version": "file:../Assets/../LocalPackages/com.bytedance.starksdk@6.3.6",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.qq.weixin.minigame": {
+      "version": "https://gitee.com/wechat-minigame/minigame-tuanjie-transform-sdk.git#main",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "207766f6db6dfad12cb8a5b6ce5c0da0520a7f97"
+    },
     "com.unity.collab-proxy": {
-      "version": "2.7.1",
+      "version": "2.8.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.tuanjie.cn"
+    },
+    "com.unity.device-simulator.devices": {
+      "version": "1.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -56,7 +56,7 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.ide.visualstudio": "2.0.22",
-        "com.unity.ide.rider": "3.0.31",
+        "com.unity.ide.rider": "3.0.34",
         "com.unity.ide.vscode": "1.2.5",
         "com.unity.editorcoroutines": "1.0.0",
         "com.unity.performance.profile-analyzer": "1.2.2",
@@ -65,7 +65,7 @@
       }
     },
     "com.unity.ide.rider": {
-      "version": "3.0.31",
+      "version": "3.0.34",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -91,7 +91,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.tuanjie.cn"

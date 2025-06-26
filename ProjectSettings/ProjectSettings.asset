@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 9f616aa63d7f98e488c48181157e4c30
+  productGUID: ef7ef430648527840a728d5a12170b3b
   AndroidProfiler: 0
   hmiUseInternalProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: VastStarryRiver
+  companyName: DefaultCompany
   productName: CrimsonRift
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -46,8 +46,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
-  defaultScreenWidthWeb: 1080
-  defaultScreenHeightWeb: 1920
+  defaultScreenWidthWeb: 960
+  defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 1
   unsupportedMSAAFallback: 0
@@ -85,11 +85,12 @@ PlayerSettings:
   androidEnableSensors: 0
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
+  audioSpatialExperience: 0
   deferSystemGesturesMode: 0
   hideHomeButton: 0
   submitAnalytics: 1
@@ -148,8 +149,9 @@ PlayerSettings:
   openHarmonyStartInFullscreen: 1
   openHarmonyRenderOutsideSafeArea: 1
   openHarmonyResizableWindow: 0
-  openHarmonyEnableLowLatencyAudio: 0
+  openHarmonyEnableLowLatencyAudio: 1
   openHarmonyFullscreenMode: 1
+  openHarmonyAutoRotationBehavior: 1
   openHarmonyBlitType: 0
   openHarmonyDefaultWindowWidth: 1920
   openHarmonyDefaultWindowHeight: 1080
@@ -165,7 +167,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.1.1
+  bundleVersion: 0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -210,8 +212,10 @@ PlayerSettings:
   strictShaderVariantMatching: 0
   VertexChannelCompressionMask: 4054
   iPhoneSdkVersion: 988
+  iOSSimulatorArchitecture: 0
   iOSTargetOSVersionString: 12.0
   tvOSSdkVersion: 0
+  tvOSSimulatorArchitecture: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 12.0
   VisionOSSdkVersion: 0
@@ -313,14 +317,7 @@ PlayerSettings:
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  m_BuildTargetIcons:
-  - m_BuildTarget: 
-    m_Icons:
-    - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 1411f2ce37e678648aa700d195369170, type: 3}
-      m_Width: 128
-      m_Height: 128
-      m_Kind: 0
+  m_BuildTargetIcons: []
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: OpenHarmony
     m_Icons:
@@ -475,13 +472,10 @@ PlayerSettings:
     m_Automatic: 1
   - m_BuildTarget: WebGLSupport
     m_APIs: 0b000000
-    m_Automatic: 0
+    m_Automatic: 1
   - m_BuildTarget: HMIAndroidPlayer
     m_APIs: 150000000b000000
     m_Automatic: 1
-  - m_BuildTarget: WeixinMiniGameSupport
-    m_APIs: 0b000000
-    m_Automatic: 0
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 0
@@ -493,8 +487,7 @@ PlayerSettings:
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
-  m_TemplateCustomTags:
-    PRODUCT_DESCRIPTION: 
+  m_TemplateCustomTags: {}
   mobileMTRendering:
     Android: 1
     OpenHarmony: 1
@@ -527,8 +520,6 @@ PlayerSettings:
   - m_BuildTarget: Android
     m_Format: 3
   - m_BuildTarget: OpenHarmony
-    m_Format: 3
-  - m_BuildTarget: WeixinMiniGame
     m_Format: 3
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
@@ -678,6 +669,7 @@ PlayerSettings:
   switchSocketBufferEfficiency: 4
   switchSocketInitializeEnabled: 1
   switchNetworkInterfaceManagerInitializeEnabled: 1
+  switchDisableHTCSPlayerConnection: 0
   switchUseNewStyleFilepaths: 1
   switchUseLegacyFmodPriorities: 0
   switchUseMicroSleepForYield: 1
@@ -770,9 +762,7 @@ PlayerSettings:
   webGLShowDiagnostics: 0
   webGLDataCaching: 1
   webGLDebugSymbols: 0
-  webGLEmscriptenArgs: ' -s EXPORTED_FUNCTIONS=_sbrk,_emscripten_stack_get_base,_emscripten_stack_get_end
-    -s ERROR_ON_UNDEFINED_SYMBOLS=0 -s TOTAL_MEMORY=256MB -s EXPORTED_RUNTIME_METHODS=''["ccall","cwrap","stackTrace","addRunDependency","removeRunDependency","FS_createPath","FS_createDataFile","stackTrace","writeStackCookie","checkStackCookie","lengthBytesUTF8","stringToUTF8"]''
-    --profiling-funcs '
+  webGLEmscriptenArgs: 
   webGLModulesDirectory: 
   webGLTemplate: APPLICATION:Default
   webGLAnalyzeBuildSize: 0
@@ -789,36 +779,12 @@ PlayerSettings:
   webGLMemoryGeometricGrowthStep: 0.2
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
-  scriptingDefineSymbols:
-    Android: DOTWEEN
-    ArmLinux: DOTWEEN
-    ArmLinuxServer: DOTWEEN
-    EmbeddedLinux: DOTWEEN
-    GameCoreScarlett: DOTWEEN
-    GameCoreXboxOne: DOTWEEN
-    HMIAndroid: DOTWEEN
-    LinuxHeadlessSimulation: DOTWEEN
-    Nintendo Switch: DOTWEEN
-    OpenHarmony: DOTWEEN
-    PS4: DOTWEEN
-    PS5: DOTWEEN
-    QNX: DOTWEEN
-    Stadia: DOTWEEN
-    Standalone: DOTWEEN
-    VisionOS: DOTWEEN
-    WebGL: DOTWEEN
-    WeixinMiniGame: HOTFIX_ENABLE;DOTWEEN
-    Windows Store Apps: DOTWEEN
-    XboxOne: DOTWEEN
-    iPhone: DOTWEEN
-    tvOS: DOTWEEN
+  scriptingDefineSymbols: {}
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
-  il2cppCodeGeneration:
-    WebGL: 1
-    WeixinMiniGame: 1
+  il2cppCodeGeneration: {}
   managedStrippingLevel:
     ArmLinux: 1
     ArmLinuxServer: 1
@@ -937,27 +903,30 @@ PlayerSettings:
   forceOpenHarmonySDCardPermission: 0
   openHarmonyUseLowAccuracyLocation: 0
   openHarmonyPredefinedPermissions: []
+  openHarmonyUseTuanjieLogo: 1
+  openHarmonyLaunchImage: {fileID: 0}
+  openHarmonyLaunchBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   OpenHarmonyKeystoreName: 
   OpenHarmonyKeyaliasName: 
   OpenHarmonyProfile: 
   OpenHarmonyCertificate: 
   OpenHarmonyUseCustomKeystore: 0
-  apiCompatibilityLevel: 3
+  OpenHarmonyUseCustomModuleJsonFive: 0
+  OpenHarmonyUseCustomTuanjiePlayerAbility: 0
+  apiCompatibilityLevel: 6
   weixinMiniGameMemorySize: 32
   weixinMiniGameExceptionSupport: 1
   weixinMiniGameExceptionOnlyEnableForUserCodes: 0
   weixinMiniGameNameFilesAsHashes: 0
   weixinMiniGameShowDiagnostics: 0
-  weixinMiniGameDataCaching: 0
-  weixinMiniGameDebugSymbols: 1
-  weixinMiniGameEmscriptenArgs: ' -s EXPORTED_FUNCTIONS=_main,_sbrk,_emscripten_stack_get_base,_emscripten_stack_get_end
-    -s ERROR_ON_UNDEFINED_SYMBOLS=0 -s TOTAL_MEMORY=256MB -s EXPORTED_RUNTIME_METHODS=''["ccall","cwrap","stackTrace","addRunDependency","removeRunDependency","FS_createPath","FS_createDataFile","stackTrace","writeStackCookie","checkStackCookie","lengthBytesUTF8","stringToUTF8"]''
-    --profiling-funcs '
+  weixinMiniGameDataCaching: 1
+  weixinMiniGameDebugSymbols: 0
+  weixinMiniGameEmscriptenArgs: 
   weixinMiniGameModulesDirectory: 
-  weixinMiniGameTemplate: PATH:E:\MyProjects\China\CrimsonRift\Library\PackageCache\com.qq.weixin.minigame@2c858e5dd9\WebGLTemplates\WXTemplate2022TJ
+  weixinMiniGameTemplate: APPLICATION:Default
   weixinMiniGameAnalyzeBuildSize: 0
   weixinMiniGameUseEmbeddedResources: 0
-  weixinMiniGameCompressionFormat: 2
+  weixinMiniGameCompressionFormat: 0
   weixinMiniGameWasmArithmeticExceptions: 0
   weixinMiniGameLinkerTarget: 1
   weixinMiniGameThreadsSupport: 0
@@ -975,6 +944,7 @@ PlayerSettings:
   weixinMiniGameInjectStrippedMethodLogger: 0
   weixinMiniGameEnableDotNetWasmExceptionHandling: 1
   weixinMiniGamePreserveEventDelegate: 0
+  activeSubplatform: 1
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
   cloudProjectId: 
@@ -985,7 +955,11 @@ PlayerSettings:
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
+  qnxEGLPriority: 0
+  embeddedLinuxEGLPriority: 0
+  androidEGLPriority: 0
   platformRequiresReadableAssets: 0
   virtualTexturingSupportEnabled: 0
   packClustersForPlayer: 0
-  insecureHttpOption: 2
+  insecureHttpOption: 0
+  useStringInternPool: 0

@@ -15,22 +15,22 @@ MonoBehaviour:
   m_BuildTarget: 47
   m_Subtarget: 0
   m_ModuleName: WeixinMiniGame
-  m_BuildPath: E:/MyProjects/China/WXGame
+  m_BuildPath: E:/MyProjects/WeChatMiniGame/MiniGame
   m_PlatformSettings:
-    rid: 8480359074655371266
+    rid: 2451262812406939653
   m_MiniGameSettings:
-    rid: 8480359074655371264
+    rid: 2451262812406939651
   m_PlayerSettingsYaml:
     m_Settings: []
   references:
     version: 2
     RefIds:
-    - rid: 8480359074655371264
+    - rid: 2451262812406939651
       type: {class: DefaultWeChatMiniGameSettings, ns: UnityEditor.ExternalMiniGame, asm: UnityEditor.CoreModule}
       data:
         m_HostName: WeChat
         m_Editor:
-          rid: 8480359074655371265
+          rid: 2451262812406939652
         ProjectConf:
           projectName: 
           Appid: 
@@ -38,7 +38,7 @@ MonoBehaviour:
           assetLoadType: 0
           compressDataPackage: 0
           VideoUrl: 
-          DST: E:/MyProjects/China/WXGame
+          DST: E:/MyProjects/WeChatMiniGame/MiniGame
           StreamCDN: 
           bundleHashLength: 32
           bundlePathIdentifier: StreamingAssets;
@@ -114,11 +114,12 @@ MonoBehaviour:
           Mathematical_Operators: 1
           CustomUnicode: 
         m_AutomaticFillInstantGame: 1
-    - rid: 8480359074655371265
+    - rid: 2451262812406939652
       type: {class: DefaultWeChatMiniGameSettingsEditor, ns: UnityEditor.ExternalMiniGame, asm: UnityEditor.CoreModule}
       data:
-        tex: {fileID: 2800000, guid: c8cfef3be1bfca643bec289339eaceb3, type: 3}
-    - rid: 8480359074655371266
+        m_HostName: WeChat
+        tex: {fileID: 0}
+    - rid: 2451262812406939653
       type: {class: MiniGamePlatformSettings, ns: UnityEditor.WeixinMiniGame, asm: UnityEditor.WeixinMiniGame.Extensions}
       data:
         m_Development: 0
