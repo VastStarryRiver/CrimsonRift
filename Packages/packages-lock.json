@@ -16,11 +16,26 @@
       "dependencies": {}
     },
     "com.qq.weixin.minigame": {
-      "version": "https://gitee.com/wechat-minigame/minigame-tuanjie-transform-sdk.git#main",
+      "version": "https://gitee.com/wechat-minigame/minigame-tuanjie-transform-sdk.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "207766f6db6dfad12cb8a5b6ce5c0da0520a7f97"
+      "hash": "90fa35a0a015c1f7ecc9c7204f45de366a7936bb"
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
+    "com.unity.cinemachine": {
+      "version": "2.10.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.31"
+      },
+      "url": "https://packages.tuanjie.cn"
     },
     "com.unity.collab-proxy": {
       "version": "2.8.2",
@@ -91,7 +106,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.tuanjie.cn"
@@ -132,7 +147,7 @@
       "url": "https://packages.tuanjie.cn"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.7",
+      "version": "3.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {

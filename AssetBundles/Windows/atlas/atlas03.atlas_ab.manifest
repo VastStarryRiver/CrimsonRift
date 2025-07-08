@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 2193003391
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a622e7e82bae4aa844abc618e0cf5588
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9c5c2bf181d9c166e27af67e2a391d17
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: a622e7e82bae4aa844abc618e0cf5588
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/UpdateAssets/Atlas/Atlas03.png
+Dependencies: []
