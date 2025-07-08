@@ -16,6 +16,7 @@ public class LuaCallCSWrap
 		L.RegFunction("AddComponent", AddComponent);
 		L.RegFunction("Clone", Clone);
 		L.RegFunction("SetActive", SetActive);
+		L.RegFunction("HideAllChildren", HideAllChildren);
 		L.RegFunction("PlayPositionAnimation", PlayPositionAnimation);
 		L.RegFunction("PlayRotationAnimation", PlayRotationAnimation);
 		L.RegFunction("PlayScaleAnimation", PlayScaleAnimation);
@@ -353,6 +354,22 @@ public class LuaCallCSWrap
 			{
 				return LuaDLL.luaL_throw(L, "invalid arguments to method: LuaCallCS.SetActive");
 			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int HideAllChildren(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			UnityEngine.Transform arg0 = (UnityEngine.Transform)ToLua.CheckObject<UnityEngine.Transform>(L, 1);
+			LuaCallCS.HideAllChildren(arg0);
+			return 0;
 		}
 		catch (Exception e)
 		{

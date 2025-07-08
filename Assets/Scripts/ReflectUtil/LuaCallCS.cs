@@ -277,4 +277,16 @@ public static partial class LuaCallCS
 
         item.SetActive(isActive);
     }
+
+    public static void HideAllChildren(Transform transform)
+    {
+        if (transform.childCount > 0)
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                var item = transform.GetChild(i);
+                item.gameObject.SetActive(false);
+            }
+        }
+    }
 }

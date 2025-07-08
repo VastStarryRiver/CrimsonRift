@@ -7,6 +7,7 @@ using BindType = ToLuaMenu.BindType;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using DG.Tweening;
+using TMPro;
 
 public static class CustomSettings
 {
@@ -121,13 +122,18 @@ public static class CustomSettings
         _GT(typeof(VerticalLayoutGroup)),
         _GT(typeof(Mask)),
         _GT(typeof(RectMask2D)),
-
-        //添加需要映射的自定义脚本
-        _GT(typeof(LuaCallCS)),
-        _GT(typeof(UIButton)),
+        _GT(typeof(TMP_InputField)),
+        _GT(typeof(TMP_InputField.OnChangeEvent)),
+        _GT(typeof(TMP_InputField.SubmitEvent)),
         _GT(typeof(Ease)),
         _GT(typeof(LoopType)),
         _GT(typeof(PathType)),
+
+        //添加需要映射的自定义脚本
+        _GT(typeof(UIMask)),
+        _GT(typeof(UIButton)),
+        _GT(typeof(UIInputField)),
+        _GT(typeof(LuaCallCS)),
         _GT(typeof(PrefabInstance)),
         _GT(typeof(SdkMsgManager)),
         _GT(typeof(DataUtilityManager)),
@@ -136,7 +142,7 @@ public static class CustomSettings
         _GT(typeof(CircleImage)),
         _GT(typeof(LoopScrollList)),
         _GT(typeof(PolygonImage)),
-        _GT(typeof(UIMask)),
+        
         _GT(typeof(LanguageManager)),
     };
 
