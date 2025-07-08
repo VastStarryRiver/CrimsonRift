@@ -6,11 +6,31 @@ public class LoopScrollListWrap
 {
 	public static void Register(LuaState L)
 	{
-		L.BeginClass(typeof(LoopScrollList), typeof(UnityEngine.MonoBehaviour));
+		L.BeginClass(typeof(LoopScrollList), typeof(UnityEngine.UI.ScrollRect));
+		L.RegFunction("AddOnValueChangedListener", AddOnValueChangedListener);
 		L.RegFunction("Init", Init);
+		L.RegFunction("UpdateAllItem", UpdateAllItem);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
+		L.RegVar("m_itemPrefab", get_m_itemPrefab, set_m_itemPrefab);
 		L.EndClass();
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int AddOnValueChangedListener(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 2);
+			LoopScrollList obj = (LoopScrollList)ToLua.CheckObject<LoopScrollList>(L, 1);
+			LuaFunction arg0 = ToLua.CheckLuaFunction(L, 2);
+			obj.AddOnValueChangedListener(arg0);
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
@@ -18,11 +38,48 @@ public class LoopScrollListWrap
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 3);
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 5)
+			{
+				LoopScrollList obj = (LoopScrollList)ToLua.CheckObject<LoopScrollList>(L, 1);
+				int arg0 = (int)LuaDLL.luaL_checknumber(L, 2);
+				int arg1 = (int)LuaDLL.luaL_checknumber(L, 3);
+				int arg2 = (int)LuaDLL.luaL_checknumber(L, 4);
+				LuaFunction arg3 = ToLua.CheckLuaFunction(L, 5);
+				obj.Init(arg0, arg1, arg2, arg3);
+				return 0;
+			}
+			else if (count == 6)
+			{
+				LoopScrollList obj = (LoopScrollList)ToLua.CheckObject<LoopScrollList>(L, 1);
+				int arg0 = (int)LuaDLL.luaL_checknumber(L, 2);
+				int arg1 = (int)LuaDLL.luaL_checknumber(L, 3);
+				int arg2 = (int)LuaDLL.luaL_checknumber(L, 4);
+				LuaFunction arg3 = ToLua.CheckLuaFunction(L, 5);
+				LuaFunction arg4 = ToLua.CheckLuaFunction(L, 6);
+				obj.Init(arg0, arg1, arg2, arg3, arg4);
+				return 0;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: LoopScrollList.Init");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int UpdateAllItem(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
 			LoopScrollList obj = (LoopScrollList)ToLua.CheckObject<LoopScrollList>(L, 1);
-			int arg0 = (int)LuaDLL.luaL_checknumber(L, 2);
-			int arg1 = (int)LuaDLL.luaL_checknumber(L, 3);
-			obj.Init(arg0, arg1);
+			obj.UpdateAllItem();
 			return 0;
 		}
 		catch (Exception e)
@@ -46,6 +103,44 @@ public class LoopScrollListWrap
 		catch (Exception e)
 		{
 			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_m_itemPrefab(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			LoopScrollList obj = (LoopScrollList)o;
+			UnityEngine.RectTransform ret = obj.m_itemPrefab;
+			ToLua.PushSealed(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index m_itemPrefab on a nil value");
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_m_itemPrefab(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			LoopScrollList obj = (LoopScrollList)o;
+			UnityEngine.RectTransform arg0 = (UnityEngine.RectTransform)ToLua.CheckObject(L, 2, typeof(UnityEngine.RectTransform));
+			obj.m_itemPrefab = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o, "attempt to index m_itemPrefab on a nil value");
 		}
 	}
 }
