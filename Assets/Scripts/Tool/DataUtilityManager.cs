@@ -30,7 +30,8 @@ public static class DataUtilityManager
     {
         get
         {
-            return LoadWebData(3);
+            string[] list = LoadWebData(1).Split(":");
+            return list[0];
         }
     }
 
@@ -38,19 +39,12 @@ public static class DataUtilityManager
     {
         get
         {
-            return int.Parse(LoadWebData(4));
+            string[] list = LoadWebData(1).Split(":");
+            return int.Parse(list[1]);
         }
     }
 
 
-
-    private class BypassCertificate : CertificateHandler
-    {
-        protected override bool ValidateCertificate(byte[] certificateData)
-        {
-            return true; // 始终返回 true 以忽略证书验证
-        }
-    }
 
     public static void InitDirectory(string path)
     {
@@ -74,17 +68,6 @@ public static class DataUtilityManager
             //确保路径中的所有文件夹都存在
             Directory.CreateDirectory(directoryPath);
         }
-    }
-
-    public static void SetWebQuestData(ref UnityWebRequest requestHandler)
-    {
-        string username = LoadWebData(1);
-        string password = LoadWebData(2);
-        string encodedAuth = Convert.ToBase64String(Encoding.UTF8.GetBytes(username + ":" + password));
-
-        requestHandler.SetRequestHeader("Authorization", "Basic " + encodedAuth);
-
-        requestHandler.certificateHandler = new BypassCertificate();
     }
 
     private static string LoadWebData(int index)
