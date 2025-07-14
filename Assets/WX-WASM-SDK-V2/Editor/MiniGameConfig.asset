@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: MiniGameConfig
   m_EditorClassIdentifier: 
   ProjectConf:
-    projectName: 
-    Appid: 
-    CDN: 
+    projectName: CrimsonRift
+    Appid: wx7b87e25d2ff45d15
+    CDN: https://139.155.11.195/svn/VastStarryRiver/WeChatMiniGame/CrimsonRift
     assetLoadType: 0
-    compressDataPackage: 0
+    compressDataPackage: 1
     VideoUrl: 
-    DST: E:\MyProjects\WeChatMiniGame\CrimsonRift\
+    DST: E:/MyProjects/WeChatMiniGame/CrimsonRift
     StreamCDN: 
     bundleHashLength: 32
     bundlePathIdentifier: StreamingAssets;
@@ -58,7 +58,7 @@ MonoBehaviour:
     ProfilingMemory: 0
     CleanBuild: 0
     CustomNodePath: 
-    autoAdaptScreen: 1
+    autoAdaptScreen: 0
     showMonitorSuggestModal: 1
     enableProfileStats: 0
     enableRenderAnalysis: 0

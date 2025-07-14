@@ -1,0 +1,696 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Atlas
+  m_EditorClassIdentifier: 
+  m_GroupName: Atlas
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 26bb8f8489cfa324d937d85c4b2a73bb
+  m_SerializeEntries:
+  - m_GUID: 00545f752a1fa7841a4284c955dddde1
+    m_Address: Atlas/Atlas03/Texture/emoji_42.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0128c20fee55b914a829ed2f3591e469
+    m_Address: Atlas/Atlas03/Texture/emoji_31.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 096bfd291069c5649b44758bd066bac6
+    m_Address: Atlas/Atlas03/Texture/emoji_7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 097820472072d1247a1239366c95fe98
+    m_Address: Atlas/Atlas01/Texture/01_Lan1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09e4799c8324620469ea31e2ba84c64d
+    m_Address: Atlas/Atlas02/Texture/02_rwtx8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0aa79457303cc084d942451d070a5600
+    m_Address: Atlas/Atlas01/Texture/01_JinDuTiao02.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cc22ae7c9b71c04ea44725360a7ad39
+    m_Address: Atlas/Atlas03/Texture/emoji_8.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f7cacd58e0c2b046b3f2f26169c7b43
+    m_Address: Atlas/Atlas00/Texture/00_alpha.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 112613f154a7d7e4fbfbfeb038a1be65
+    m_Address: Atlas/Atlas00/Texture/00_login.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 137e745680b44d64798e2074df66a1c4
+    m_Address: Atlas/Atlas03/Texture/emoji_19.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14b26821155954842b3f19a8b221488c
+    m_Address: Atlas/Atlas03/Texture/emoji_15.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 166b8dcf84a97854aa56abf5ae6c9efd
+    m_Address: Atlas/Atlas03/Texture/emoji_40.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19737357ab960c44b901ca04fc8540de
+    m_Address: Atlas/Atlas03/Texture/emoji_51.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b3cc8e1fc68c2645b319633760ccbc4
+    m_Address: Atlas/Atlas03/Texture/emoji_53.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b5fc1ae7ec44ba4c983021139455d5f
+    m_Address: Atlas/Atlas03/Texture/emoji_22.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d23035978c9d9b409b569dca4d80a57
+    m_Address: Atlas/Atlas01/Texture/01_FenYeFenGeXian.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1fdcb548a5651b5499cac97001186409
+    m_Address: Atlas/Atlas03/Texture/emoji_5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2218befc0cea48c499a78222a9063985
+    m_Address: Atlas/Atlas03/Texture/emoji_25.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2236730c14f872a42a1b15eb33006652
+    m_Address: Atlas/Atlas03/Texture/emoji_20.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 233ecf9c73d5da043a2fd359f5e11f17
+    m_Address: Atlas/Atlas03/Texture/emoji_48.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 24a06e7db65a1c34fbb74eaa723b2783
+    m_Address: Atlas/Atlas02/Texture/02_FunOpen10.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2606fa1ff80944743aec08670b814005
+    m_Address: Atlas/Atlas01/Texture/01_WenHao.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2845a919db67dca43b83ad9264131463
+    m_Address: Atlas/Atlas03/Texture/emoji_11.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29d70c5c3e1847a48856735529a026b4
+    m_Address: Atlas/Atlas01/Texture/01_alpha.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f9ec60180a34a040b92eb6d67339642
+    m_Address: Atlas/Atlas03/Texture/emoji_60.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fa0671782a60db4c83011f9ff281f0d
+    m_Address: Atlas/Atlas03/Texture/emoji_30.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2fa90d7c76586114fbdfe920061aedd3
+    m_Address: Atlas/Atlas03/Texture/emoji_33.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3038b8c31ca55344b9a74001984471bc
+    m_Address: Atlas/Atlas03/Texture/emoji_23.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31013f7c435e91a49924822d473262fa
+    m_Address: Atlas/Atlas03/Texture/emoji_45.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33c43e04ef7af8e4dbaf8401365e2882
+    m_Address: Atlas/Atlas02/Atlas02.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SpriteAtlas
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 377660d6cb92b6d42b9014859461b08c
+    m_Address: Atlas/Atlas03/Texture/emoji_1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37bed17ae1bd4f44f8a46493e13e8268
+    m_Address: Atlas/Atlas01/Texture/01_dian2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c0e0bd15b8e542439c201d650d2c80c
+    m_Address: Atlas/Atlas02/Texture/02_rwtx3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c70b72b8f7880647a986deb349c1d0e
+    m_Address: Atlas/Atlas01/Texture/01_HuoBiJia.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e5dbdd9b1237cc45985ac6260884cd5
+    m_Address: Atlas/Atlas03/Texture/emoji_50.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ff63cee40310764cad38d29f80dc503
+    m_Address: Atlas/Atlas02/Texture/02_rwtx4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4381479f80e8aba49a9cc40bda5c9b39
+    m_Address: Atlas/Atlas01/Texture/01_CeBianFenGeXian.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43b3b293ed9f61c488cd676875b2033e
+    m_Address: Atlas/Atlas03/Texture/emoji_3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4487c14054847b0488a7ac092ce880de
+    m_Address: Atlas/Atlas03/Texture/emoji_37.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47d6c5b42ac11b242acd78a0d85f72e2
+    m_Address: Atlas/Atlas01/Texture/01_TanChuangJianTou.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4df87d9feacdf284796224098e4e9d46
+    m_Address: Atlas/Atlas03/Texture/emoji_43.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 519a236c7fac6724eae7a19279b20c42
+    m_Address: Atlas/Atlas02/Texture/02_FunOpen12.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5223457ea67299945879b230df8c3f42
+    m_Address: Atlas/Atlas03/Texture/emoji_28.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53c2a3b8303d24643be89830fbf73f33
+    m_Address: Atlas/Atlas03/Texture/emoji_14.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a75140551b056f46bb85f3d9130473c
+    m_Address: Atlas/Atlas03/Texture/emoji_26.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ad34c9294600104699f0088fe10a4b4
+    m_Address: Atlas/Atlas01/Texture/01_Arrowright.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b75cb7348814564aa53961cb7a90715
+    m_Address: Atlas/Atlas03/Texture/emoji_35.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f6abe08573113f4bad5c333f59bb33a
+    m_Address: Atlas/Atlas01/Texture/01_tuodong.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62c8901bc38c9bf43b9aca0c5e537a1f
+    m_Address: Atlas/Atlas01/Texture/01_Lan2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 654542e25b045c74fa6110f5f33bfbef
+    m_Address: Atlas/Atlas03/Texture/emoji_36.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67b8ca1439b26c248814c4bbc87dde90
+    m_Address: Atlas/Atlas03/Texture/emoji_32.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c4a406b6733cb449af3d8b2616e59a2
+    m_Address: Atlas/Atlas01/Texture/01_Lan3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ee1aeff0fcca564dafccaf2167fc781
+    m_Address: Atlas/Atlas03/Texture/emoji_41.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7468eecf77d4f604ebc4aefca313cbe7
+    m_Address: Atlas/Atlas03/Texture/emoji_52.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 755fa8a0d76590b4bbf84ec21bfc15bb
+    m_Address: Atlas/Atlas03/Atlas03.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SpriteAtlas
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7693347c44d54964790105b64ada6daf
+    m_Address: Atlas/Atlas01/Texture/01_ChengYuan.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76d28fc35af47fe468d4938ae95e324d
+    m_Address: Atlas/Atlas01/Texture/01_Cheng2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7709729e272c54d48adeb2abf01dcc43
+    m_Address: Atlas/Atlas03/Texture/emoji_17.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b3577384c6672349a691d480287ce6e
+    m_Address: Atlas/Atlas03/Texture/emoji_49.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e479679d15a1d843a9ab1ddc5dcc2ff
+    m_Address: Atlas/Atlas01/Texture/01_BiaoTiZS030.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7e81029c383b6444cb4e0c1725169f9a
+    m_Address: Atlas/Atlas03/Texture/emoji_56.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 811b994ba74ecb04abe4edd7209fca57
+    m_Address: Atlas/Atlas03/Texture/emoji_2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83d950ec581afea4b9a921b517944b93
+    m_Address: Atlas/Atlas01/Texture/01_Cheng3.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 856e5632bee15d24ba0396464fcbd7cf
+    m_Address: Atlas/Atlas01/Texture/01_BiaoTiFenGeXian.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a41d9d2283b63f4c98809068a886549
+    m_Address: Atlas/Atlas00/Texture/00_icon.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ee2d9bcf0039024596976529f455723
+    m_Address: Atlas/Atlas02/Texture/02_alpha.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f0d9806c8e64024991af0b82cfd6d0e
+    m_Address: Atlas/Atlas03/Texture/emoji_54.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90f920f8ae9a8214fb4837fe4ab28847
+    m_Address: Atlas/Atlas03/Texture/emoji_27.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92fb311490f75d547bb936a5a0436dd3
+    m_Address: Atlas/Atlas03/Texture/emoji_24.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95eb5b5672e735942b346ce577e08528
+    m_Address: Atlas/Atlas03/Texture/emoji_9.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98610b0788cd87141ae7139de165961a
+    m_Address: Atlas/Atlas03/Texture/emoji_59.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ae386a401052d44fa9bd1df0deb5bca
+    m_Address: Atlas/Atlas02/Texture/02_rwtx2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b44f0aa8ba14ca4d8febadcfb792dbb
+    m_Address: Atlas/Atlas02/Texture/02_FunOpen11.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ec1e690f2e58dc41acc580d4c730baf
+    m_Address: Atlas/Atlas01/Atlas01.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SpriteAtlas
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f593c449b219f2478bd79648c217af4
+    m_Address: Atlas/Atlas03/Texture/emoji_16.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a11be569245b25544a72f654ea3eeb32
+    m_Address: Atlas/Atlas03/Texture/emoji_34.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1b37fe38f06b6a43a717767d5bcb9a1
+    m_Address: Atlas/Atlas03/Texture/emoji_38.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a22f9fd0c606fd54cb99f067869afab6
+    m_Address: Atlas/Atlas01/Texture/01_JinDuTiao03.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2d4fd893c8e6914980ea33215a2c235
+    m_Address: Atlas/Atlas03/Texture/emoji_21.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8ff7256f0e7e9d4e8a48279a4b81a5f
+    m_Address: Atlas/Atlas02/Texture/02_rwtx7.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af0375a08febf9543b725e26a56a54b3
+    m_Address: Atlas/Atlas03/Texture/emoji_6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b58d242f19046a4498926ccaf68e995b
+    m_Address: Atlas/Atlas01/Texture/01_AnXing.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5f680f2fb878d4489e991f748bda845
+    m_Address: Atlas/Atlas03/Texture/emoji_13.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6f5f767a93984a499d155328b848934
+    m_Address: Atlas/Atlas03/Texture/emoji_18.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bfadd3a7aca30df41bad38c6376607e5
+    m_Address: Atlas/Atlas01/Texture/01_JianTou2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2c98ba53b85cdb46a845f5133f1a179
+    m_Address: Atlas/Atlas01/Texture/01_dian.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c486b66717274fc4dab188b7bd687db3
+    m_Address: Atlas/Atlas01/Texture/01_SaoDangZhuangTai2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7889570a5fd59844919c66c81dab5f3
+    m_Address: Atlas/Atlas02/Texture/02_FunOpen13.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7fcf6c917154e64bac617874f0301cb
+    m_Address: Atlas/Atlas02/Texture/02_rwtx1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9df1ec885bf5d64e96a60c37a28cc1b
+    m_Address: Atlas/Atlas02/Texture/02_rwtx6.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca9056fe46d897d44aa84bb4a8f44cda
+    m_Address: Atlas/Atlas03/Texture/emoji_10.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cb6e2433ffa9edb4d81454e9c2333bde
+    m_Address: Atlas/Atlas01/Texture/01_QiPao2.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d1a5403ef9412c64e8906b7825f28766
+    m_Address: Atlas/Atlas01/Texture/01_Cheng1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d695f8d5609f5af4186dbdff58bfbf60
+    m_Address: Atlas/Atlas02/Texture/02_rwtx9.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbffec88733d4d840b4cfb44e257082e
+    m_Address: Atlas/Atlas03/Texture/emoji_4.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dcf170843b7dfe145849f4cdf8dc0abc
+    m_Address: Atlas/Atlas03/Texture/emoji_47.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfa1c1ca7de0df740b8aff62c2d8a1c3
+    m_Address: Atlas/Atlas03/Texture/emoji_12.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3827f9664944de4cb8d957cef04fc83
+    m_Address: Atlas/Atlas00/Atlas00.spriteatlasv2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SpriteAtlas
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4e9e6d731158c545ae2544c7a2f56aa
+    m_Address: Atlas/Atlas03/Texture/emoji_29.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e532b0d7f39a23c4495786670f77c66a
+    m_Address: Atlas/Atlas03/Texture/emoji_44.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e56bc725a54f13d43bbaadd35fce6996
+    m_Address: Atlas/Atlas03/Texture/emoji_46.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5e87b7c8e059ca4d9ecc6ec20b80b22
+    m_Address: Atlas/Atlas01/Texture/01_JinDuTiao01.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e76dbed67908e1c40a2336eb6ae88ada
+    m_Address: Atlas/Atlas01/Texture/01_SaoDangZhuangTai1.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: edf7f85c4ab6cc647ad52aa22a9c9593
+    m_Address: Atlas/Atlas01/Texture/01_TanHao.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f41f3f73028c328439b93245deaea269
+    m_Address: Atlas/Atlas01/Texture/01_TanChuangFenGeXian.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4c038c97b364a14f935b7758dc9fa77
+    m_Address: Atlas/Atlas03/Texture/emoji_55.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f566a14c9a1a2b546851f66399395635
+    m_Address: Atlas/Atlas02/Texture/02_rwtx5.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f69353ba4cdfe414d8727584f683a5df
+    m_Address: Atlas/Atlas03/Texture/emoji_39.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa63fe0e1fb33574ba985dfa7c2b3358
+    m_Address: Atlas/Atlas03/Texture/emoji_57.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb54d217bd638774f8f35b2851df9eda
+    m_Address: Atlas/Atlas01/Texture/01_BiaoTiDian.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff45d29c8cdbf5d4f9ecbb44fc6b2ed3
+    m_Address: Atlas/Atlas03/Texture/emoji_58.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff5262664f62c4b4f98f4b85e8222bad
+    m_Address: Atlas/Atlas01/Texture/01_BeiBao002.png
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sprite
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 01a70b2d88f1f484d87417401086d347, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b4e779d6882345740b234ecc8cdf7d40, type: 2}

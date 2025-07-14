@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Materials
+  m_EditorClassIdentifier: 
+  m_GroupName: Materials
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d1130500d3842764db01f07a78f1f5f3
+  m_SerializeEntries:
+  - m_GUID: 158398fa161fb404c9ed270eed3d2264
+    m_Address: Materials/UIMaskChildren/UIMaskChildrenMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mat
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ca157b2b5c3f264ebe2c48b9e3f76e0
+    m_Address: Materials/UIMaskGrayscale/UIMaskGrayscaleMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mat
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30c1911a9e5b91a48bc5b89b8d6a88e0
+    m_Address: Materials/UIMaskParent/UIMaskParentMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mat
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 475530265e1f64848b29cfe8d8aa0e0b
+    m_Address: Materials/UIMaskGrayscale/UIMaskGrayscaleShader.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c0e10fab654cdc4a969a630165c0239
+    m_Address: Materials/Grayscale/GrayscaleShader.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae3b2b184851e0e4c81b00afa25f44d4
+    m_Address: Materials/Grayscale/GrayscaleMaterial.mat
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mat
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: de2872c21da6b874286f0495c7e817aa
+    m_Address: Materials/UIMaskChildren/UIMaskChildrenShader.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb4bb1aa0af84464fa5aba7487af9426
+    m_Address: Materials/UIMaskParent/UIMaskParentShader.shader
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Shader
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 01a70b2d88f1f484d87417401086d347, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6b4c749e979417941a88b3ca69300ed3, type: 2}

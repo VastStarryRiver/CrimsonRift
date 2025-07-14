@@ -2,7 +2,7 @@ Shader "MyShader/Grayscale"
 {
     Properties
     {
-        [PerRendererData] _MainTex ("Base (RGB)", 2D) = "white" {}
+        _MainTex ("Base (RGB)", 2D) = "white" { }
     }
 
     SubShader

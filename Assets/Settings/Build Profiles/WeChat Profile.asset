@@ -15,30 +15,31 @@ MonoBehaviour:
   m_BuildTarget: 47
   m_Subtarget: 0
   m_ModuleName: WeixinMiniGame
-  m_BuildPath: E:/MyProjects/WeChatMiniGame/MiniGame
+  m_BuildPath: E:/MyProjects/WeChatMiniGame/CrimsonRift
   m_PlatformSettings:
-    rid: 2451262812406939653
+    rid: 2075286626671788037
   m_MiniGameSettings:
-    rid: 2451262812406939651
+    rid: 2075286626671788035
   m_PlayerSettingsYaml:
     m_Settings: []
   references:
     version: 2
     RefIds:
-    - rid: 2451262812406939651
-      type: {class: DefaultWeChatMiniGameSettings, ns: UnityEditor.ExternalMiniGame, asm: UnityEditor.CoreModule}
+    - rid: 2075286626671788035
+      type: {class: DefaultWeChatMiniGameSettings, ns: UnityEditor.ExternalMiniGame,
+        asm: UnityEditor.CoreModule}
       data:
         m_HostName: WeChat
         m_Editor:
-          rid: 2451262812406939652
+          rid: 2075286626671788036
         ProjectConf:
-          projectName: 
-          Appid: 
-          CDN: 
+          projectName: CrimsonRift
+          Appid: wx7b87e25d2ff45d15
+          CDN: https://139.155.11.195/svn/VastStarryRiver/WeChatMiniGame/CrimsonRift
           assetLoadType: 0
-          compressDataPackage: 0
+          compressDataPackage: 1
           VideoUrl: 
-          DST: E:/MyProjects/WeChatMiniGame/MiniGame
+          DST: E:/MyProjects/WeChatMiniGame/CrimsonRift
           StreamCDN: 
           bundleHashLength: 32
           bundlePathIdentifier: StreamingAssets;
@@ -70,7 +71,7 @@ MonoBehaviour:
           ScriptOnly: 0
           Il2CppOptimizeSize: 1
           profilingFuncs: 1
-          Webgl2: 0
+          Webgl2: 1
           fbslim: 0
           DeleteStreamingAssets: 1
           ProfilingMemory: 0
@@ -114,12 +115,13 @@ MonoBehaviour:
           Mathematical_Operators: 1
           CustomUnicode: 
         m_AutomaticFillInstantGame: 1
-    - rid: 2451262812406939652
-      type: {class: DefaultWeChatMiniGameSettingsEditor, ns: UnityEditor.ExternalMiniGame, asm: UnityEditor.CoreModule}
+    - rid: 2075286626671788036
+      type: {class: DefaultWeChatMiniGameSettingsEditor, ns: UnityEditor.ExternalMiniGame,
+        asm: UnityEditor.CoreModule}
       data:
         m_HostName: WeChat
-        tex: {fileID: 0}
-    - rid: 2451262812406939653
+        tex: {fileID: 2800000, guid: c77d0c1c1d408834282bf0fc63d8aa0e, type: 3}
+    - rid: 2075286626671788037
       type: {class: MiniGamePlatformSettings, ns: UnityEditor.WeixinMiniGame, asm: UnityEditor.WeixinMiniGame.Extensions}
       data:
         m_Development: 0

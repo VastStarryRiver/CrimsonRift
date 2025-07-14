@@ -15,7 +15,7 @@ MonoBehaviour:
   ProjectConf:
     projectName: 
     Appid: 
-    DST: E:\MyProjects\WeChatMiniGame\CrimsonRift\
+    DST: E:\MyProjects\CrimsonRift\
     MemorySize: 256
     Orientation: 0
     IOSDevicePixelRatio: 0

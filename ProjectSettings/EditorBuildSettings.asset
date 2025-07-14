@@ -7,13 +7,17 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Start.scene
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: 99c9720ab356a0642a771bea13969a05
   m_BuildProfiles:
   - enabled: 1
     packaged: 0
     path: Assets/Settings/Build Profiles/New WeChat Profile.asset
-    guid: 3369aa543cc12fe4f8813bc49aae5f71
-  m_configObjects: {}
+    guid: f26e7e97c33c2834e9778f18b4d17798
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 326cd6ff7675c4a4ead1dc092e65595c,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 622b8d005e4f1fb44999cd35ff2928e2,
+      type: 2}
   m_SlimFeaturesWeixinMiniGame:
     AllocateOverhead: 1
     DecompressASTC: 0

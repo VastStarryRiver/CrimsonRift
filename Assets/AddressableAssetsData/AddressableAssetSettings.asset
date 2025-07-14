@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_DefaultGroup: b4222f4bf3ca63842bceb60972c0c3b5
+  m_currentHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_OptimizeCatalogSize: 0
+  m_BuildRemoteCatalog: 0
+  m_BundleLocalCatalog: 0
+  m_CatalogRequestsTimeout: 0
+  m_DisableCatalogUpdateOnStart: 0
+  m_IgnoreUnsupportedFilesInBuild: 0
+  m_UniqueBundleIds: 0
+  m_NonRecursiveBuilding: 1
+  m_CCDEnabled: 0
+  m_maxConcurrentWebRequests: 3
+  m_ContiguousBundles: 1
+  m_StripUnityVersionFromBundleBuild: 0
+  m_DisableVisibleSubAssetRepresentations: 0
+  m_ShaderBundleNaming: 0
+  m_ShaderBundleCustomNaming: 
+  m_MonoScriptBundleNaming: 0
+  m_CheckForContentUpdateRestrictionsOption: 0
+  m_MonoScriptBundleCustomNaming: 
+  m_RemoteCatalogBuildPath:
+    m_Id: 
+  m_RemoteCatalogLoadPath:
+    m_Id: 
+  m_ContentStateBuildPathProfileVariableName: 
+  m_CustomContentStateBuildPath: 
+  m_ContentStateBuildPath: 
+  m_BuildAddressablesWithPlayerBuild: 0
+  m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
+  m_GroupAssets:
+  - {fileID: 11400000, guid: e15cc7801ddb7d848be19dc9764a1b33, type: 2}
+  - {fileID: 11400000, guid: fef37afe0de56e34c93947611d9683a7, type: 2}
+  - {fileID: 11400000, guid: 503b512391b0fb141ab20180c197ccd0, type: 2}
+  - {fileID: 11400000, guid: 8671281187755494aa27ea10fdf66490, type: 2}
+  - {fileID: 11400000, guid: 6c28030a264f0ed4281d0f31643833bd, type: 2}
+  - {fileID: 11400000, guid: 24e2ab2380052cf40a3afbc0118f65fb, type: 2}
+  - {fileID: 11400000, guid: efa09467dbc67ac438ccc7802ee94cac, type: 2}
+  m_BuildSettings:
+    m_CompileScriptsInVirtualMode: 0
+    m_CleanupStreamingAssetsAfterBuilds: 1
+    m_LogResourceManagerExceptions: 1
+    m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
+  m_ProfileSettings:
+    m_Profiles:
+    - m_InheritedParent: 
+      m_Id: 88885119b610d8c4d97d3fb0c4b20415
+      m_ProfileName: Default
+      m_Values:
+      - m_Id: 18be8031c2e11c246b02d8fb847fc291
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 3d878376b72cf7841b755a24ba1277cb
+        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+      - m_Id: 8e0406ec386734f449f927fc8ccd9c00
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: af6a6c31c1138564994618e20c2c545d
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: de882c94c8b9d02419ee7803d933df5c
+        m_Value: ServerData/[BuildTarget]
+    - m_InheritedParent: 
+      m_Id: 46db72983e563c94791fa79d6b1dafdd
+      m_ProfileName: WeixinMiniGame
+      m_Values:
+      - m_Id: 18be8031c2e11c246b02d8fb847fc291
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 3d878376b72cf7841b755a24ba1277cb
+        m_Value: https://139.155.11.195/svn/VastStarryRiver/WeChatMiniGame/CrimsonRift/Addressables/WeixinMiniGame
+      - m_Id: 8e0406ec386734f449f927fc8ccd9c00
+        m_Value: WeixinMiniGame
+      - m_Id: af6a6c31c1138564994618e20c2c545d
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: de882c94c8b9d02419ee7803d933df5c
+        m_Value: E:\MyProjects\WeChatMiniGame\CrimsonRift\Addressables\WeixinMiniGame
+    - m_InheritedParent: 
+      m_Id: d0de2afaee1e59f45b0b7373ee2fa019
+      m_ProfileName: Windows
+      m_Values:
+      - m_Id: 18be8031c2e11c246b02d8fb847fc291
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: 3d878376b72cf7841b755a24ba1277cb
+        m_Value: https://139.155.11.195/svn/VastStarryRiver/WeChatMiniGame/CrimsonRift/Addressables/Windows
+      - m_Id: 8e0406ec386734f449f927fc8ccd9c00
+        m_Value: StandaloneWindows64
+      - m_Id: af6a6c31c1138564994618e20c2c545d
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: de882c94c8b9d02419ee7803d933df5c
+        m_Value: E:\MyProjects\WeChatMiniGame\CrimsonRift\Addressables\Windows
+    m_ProfileEntryNames:
+    - m_Id: 18be8031c2e11c246b02d8fb847fc291
+      m_Name: Local.BuildPath
+      m_InlineUsage: 0
+    - m_Id: 3d878376b72cf7841b755a24ba1277cb
+      m_Name: Remote.LoadPath
+      m_InlineUsage: 0
+    - m_Id: 8e0406ec386734f449f927fc8ccd9c00
+      m_Name: BuildTarget
+      m_InlineUsage: 0
+    - m_Id: af6a6c31c1138564994618e20c2c545d
+      m_Name: Local.LoadPath
+      m_InlineUsage: 0
+    - m_Id: de882c94c8b9d02419ee7803d933df5c
+      m_Name: Remote.BuildPath
+      m_InlineUsage: 0
+    m_ProfileVersion: 1
+  m_LabelTable:
+    m_LabelNames:
+    - default
+    - UI
+    - Sprite
+    - Texture
+    - SpriteAtlas
+    - Mat
+    - Shader
+    - Anim
+    - Audio
+  m_SchemaTemplates: []
+  m_GroupTemplateObjects:
+  - {fileID: 11400000, guid: 63125238b5f614a45b0e95962d54a44c, type: 2}
+  m_InitializationObjects: []
+  m_CertificateHandlerType:
+    m_AssemblyName: 
+    m_ClassName: 
+  m_ActivePlayerDataBuilderIndex: 3
+  m_DataBuilders:
+  - {fileID: 11400000, guid: 4843300393ef9af47825a815725b1566, type: 2}
+  - {fileID: 11400000, guid: e43a87a96779bd144af9e76964040369, type: 2}
+  - {fileID: 11400000, guid: 81d7991c2420b3349baed86d01f3a446, type: 2}
+  - {fileID: 11400000, guid: ad39cbb19cfb7504391f830a9575fd93, type: 2}
+  m_ActiveProfileId: d0de2afaee1e59f45b0b7373ee2fa019
+  m_HostingServicesManager:
+    m_HostingServiceInfos: []
+    m_Settings: {fileID: 11400000}
+    m_NextInstanceId: 0
+    m_RegisteredServiceTypeRefs: []
+    m_PingTimeoutInMilliseconds: 5000
