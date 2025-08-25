@@ -143,6 +143,8 @@ public class Launcher : MonoBehaviour
         string webPath = DataUtilityManager.WebRootPath + "CatalogueFiles/CatalogueFile.txt";
         UnityWebRequest requestHandler = UnityWebRequest.Get(webPath);//下载路径需要加上文件的后缀，没有后缀则不加
 
+        DataUtilityManager.SetWebQuestData(ref requestHandler);
+
         yield return requestHandler.SendWebRequest();
 
         if (requestHandler.result == UnityWebRequest.Result.Success)
@@ -235,6 +237,8 @@ public class Launcher : MonoBehaviour
 
         UnityWebRequest headRequest = UnityWebRequest.Head(webPath);//发送HEAD请求获取文件大小
 
+        DataUtilityManager.SetWebQuestData(ref headRequest);
+
         yield return headRequest.SendWebRequest();
 
         if (headRequest.result == UnityWebRequest.Result.Success)
@@ -261,6 +265,8 @@ public class Launcher : MonoBehaviour
         string webPath = DataUtilityManager.WebRootPath + path;
 
         UnityWebRequest requestHandler = UnityWebRequest.Get(webPath);//下载路径需要加上文件的后缀，没有后缀则不加
+
+        DataUtilityManager.SetWebQuestData(ref requestHandler);
 
         requestHandler.SendWebRequest();
 

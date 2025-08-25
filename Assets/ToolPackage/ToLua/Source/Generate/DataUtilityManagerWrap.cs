@@ -8,6 +8,7 @@ public class DataUtilityManagerWrap
 	{
 		L.BeginStaticLibs("DataUtilityManager");
 		L.RegFunction("InitDirectory", InitDirectory);
+		L.RegFunction("SetWebQuestData", SetWebQuestData);
 		L.RegVar("m_platform", get_m_platform, set_m_platform);
 		L.RegVar("m_localRootPath", get_m_localRootPath, set_m_localRootPath);
 		L.RegVar("m_binPath", get_m_binPath, set_m_binPath);
@@ -26,6 +27,23 @@ public class DataUtilityManagerWrap
 			string arg0 = ToLua.CheckString(L, 1);
 			DataUtilityManager.InitDirectory(arg0);
 			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int SetWebQuestData(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			UnityEngine.Networking.UnityWebRequest arg0 = (UnityEngine.Networking.UnityWebRequest)ToLua.CheckObject<UnityEngine.Networking.UnityWebRequest>(L, 1);
+			DataUtilityManager.SetWebQuestData(ref arg0);
+			ToLua.PushObject(L, arg0);
+			return 1;
 		}
 		catch (Exception e)
 		{
