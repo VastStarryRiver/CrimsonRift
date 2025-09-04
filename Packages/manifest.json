@@ -9,6 +9,7 @@
     }
   ],
   "dependencies": {
+    "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
     "com.google.external-dependency-manager": "1.2.183",
     "com.taptap.sdk.core": "https://github.com/taptap/TapSDKCore-Unity.git#4.4.3",
     "com.taptap.sdk.login": "https://github.com/taptap/TapSDKLogin-Unity.git#4.4.3",

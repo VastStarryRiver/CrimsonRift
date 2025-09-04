@@ -130,7 +130,6 @@ public static class CustomSettings
         _GT(typeof(PathType)),
 
         //添加需要映射的自定义脚本
-        _GT(typeof(UIMask)),
         _GT(typeof(UIButton)),
         _GT(typeof(UIInputField)),
         _GT(typeof(LuaCallCS)),

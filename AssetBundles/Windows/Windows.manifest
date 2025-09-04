@@ -1,50 +1,44 @@
 ManifestFileVersion: 0
-CRC: 1350722617
+CRC: 2237499067
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
-      Name: atlas/atlas02.atlas_ab
+      Name: atlas/bg_hghg_wdtx1.atlas_ab
       Dependencies: {}
     Info_1:
-      Name: atlas/atlas01.atlas_ab
+      Name: atlas/atlas02.atlas_ab
       Dependencies: {}
     Info_2:
-      Name: materials/uimaskparent/uimaskparentmaterial.mat_ab
-      Dependencies: {}
-    Info_3:
-      Name: atlas/atlas00.atlas_ab
-      Dependencies: {}
-    Info_4:
       Name: materials/uimaskgrayscale/uimaskgrayscalematerial.mat_ab
       Dependencies: {}
-    Info_5:
-      Name: animtion/play.anim_ab
-      Dependencies: {}
-    Info_6:
+    Info_3:
       Name: materials/grayscale/grayscalematerial.mat_ab
       Dependencies: {}
+    Info_4:
+      Name: atlas/atlas00.atlas_ab
+      Dependencies: {}
+    Info_5:
+      Name: audios/music.audio_ab
+      Dependencies: {}
+    Info_6:
+      Name: prefabs/ui/workflow/loginpanel.prefab_ab
+      Dependencies:
+        Dependency_0: atlas/bg_hghg_wdtx1.atlas_ab
+        Dependency_1: atlas/atlas00.atlas_ab
+        Dependency_2: atlas/atlas01.atlas_ab
+        Dependency_3: animtion/play.anim_ab
     Info_7:
-      Name: atlas/bg_hghg_wdtx1.atlas_ab
+      Name: atlas/bg_hghg_wdtx2.atlas_ab
       Dependencies: {}
     Info_8:
       Name: atlas/bg_hghg_wdtx3.atlas_ab
       Dependencies: {}
     Info_9:
-      Name: atlas/bg_hghg_wdtx2.atlas_ab
+      Name: atlas/atlas01.atlas_ab
       Dependencies: {}
     Info_10:
-      Name: materials/uimaskchildren/uimaskchildrenmaterial.mat_ab
+      Name: atlas/atlas03.atlas_ab
       Dependencies: {}
     Info_11:
-      Name: audios/music.audio_ab
-      Dependencies: {}
-    Info_12:
-      Name: prefabs/ui/workflow/loginpanel.prefab_ab
-      Dependencies:
-        Dependency_0: atlas/atlas01.atlas_ab
-        Dependency_1: atlas/atlas00.atlas_ab
-        Dependency_2: animtion/play.anim_ab
-        Dependency_3: atlas/bg_hghg_wdtx1.atlas_ab
-    Info_13:
-      Name: atlas/atlas03.atlas_ab
+      Name: animtion/play.anim_ab
       Dependencies: {}

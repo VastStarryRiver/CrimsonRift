@@ -11,7 +11,6 @@ public static class LuaBinder
 		L.BeginModule(null);
 		LuaInterface_DebuggerWrap.Register(L);
 		LuaProfilerWrap.Register(L);
-		UIMaskWrap.Register(L);
 		UIButtonWrap.Register(L);
 		UIInputFieldWrap.Register(L);
 		LuaCallCSWrap.Register(L);
