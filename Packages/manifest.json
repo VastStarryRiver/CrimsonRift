@@ -13,6 +13,7 @@
     "com.google.external-dependency-manager": "1.2.183",
     "com.taptap.sdk.core": "https://github.com/taptap/TapSDKCore-Unity.git#4.4.3",
     "com.taptap.sdk.login": "https://github.com/taptap/TapSDKLogin-Unity.git#4.4.3",
+    "com.unity.2d.sprite": "1.0.0",
     "com.unity.cinemachine": "2.10.3",
     "com.unity.collab-proxy": "2.6.0",
     "com.unity.feature.development": "1.0.1",
