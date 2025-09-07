@@ -131,7 +131,6 @@ public static class CustomSettings
 
         //添加需要映射的自定义脚本
         _GT(typeof(UIButton)),
-        _GT(typeof(UIInputField)),
         _GT(typeof(LuaCallCS)),
         _GT(typeof(PrefabInstance)),
         _GT(typeof(SdkMsgManager)),
