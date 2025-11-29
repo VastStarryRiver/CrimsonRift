@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Language Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Language
+  m_TableCollectionNameGuidString: ed73a5da164a2c243b494e390024c8aa
+  m_Entries:
+  - m_Id: 23283798016
+    m_Key: scene_key1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23317352448
+    m_Key: scene_key2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23317352449
+    m_Key: scene_key3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23317352450
+    m_Key: scene_key4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23317352451
+    m_Key: scene_key5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23317352452
+    m_Key: scene_key6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23317352453
+    m_Key: scene_key7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23317352454
+    m_Key: scene_key8
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1748813377091404339
+  references:
+    version: 2
+    RefIds:
+    - rid: 1748813377091404339
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1763977003445

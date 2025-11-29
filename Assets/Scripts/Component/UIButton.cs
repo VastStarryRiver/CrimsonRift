@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using LuaInterface;
+using XLua;
 
 public class UIButton : Button, IBeginDragHandler, IDragHandler, IEndDragHandler
 {

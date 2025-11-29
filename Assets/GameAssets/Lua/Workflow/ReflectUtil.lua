@@ -1,0 +1,5 @@
+Utils = CS.Utils
+LanguageManager = CS.LanguageManager.Instance
+SdkManager = CS.SdkManager.Instance
+WrapMode = CS.UnityEngine.WrapMode
+DebugLogTool = CS.DebugLogTool

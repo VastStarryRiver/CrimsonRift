@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using LuaInterface;
+using XLua;
 
 public class LoopScrollList : ScrollRect
 {
@@ -8,8 +8,6 @@ public class LoopScrollList : ScrollRect
     private int m_totalCount = 0;
     private LuaFunction m_updateFunc;
     private LuaFunction m_onValueChangedFunc;
-    private int m_index1 = -1;
-    private int m_index2 = -1;
     private float m_lastOffset;
 
 
@@ -71,7 +69,7 @@ public class LoopScrollList : ScrollRect
         m_updateFunc = updateFunc;
         m_totalCount = totalCount;
 
-        LuaCallCS.HideAllChildren(content);
+        Utils.HideAllChildren(content);
 
         for (int i = 0; i < showCount; i++)
         {
@@ -112,9 +110,6 @@ public class LoopScrollList : ScrollRect
         }
 
         content.anchoredPosition = Vector2.zero;
-
-        m_index1 = -1;
-        m_index2 = -1;
 
         callBack?.Call();
     }

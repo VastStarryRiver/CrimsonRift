@@ -50,7 +50,7 @@ namespace Invariable
                 point = Input.GetTouch(0).position;
             }
 
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(LuaCallCS.MainUIRoot, point, LuaCallCS.MainUICamera, out point);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(Utils.MainUIRoot, point, Utils.MainUICamera, out point);
 
             if (!isSetCurrPos)
             {

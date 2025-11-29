@@ -8,32 +8,52 @@
         "com.unity.ugui": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
-      "hash": "4b98abd7469b10d55c9c623830cb6e1518f72731"
+      "hash": "c54f63cb18a22382215b142b63e232f0f86fff58"
+    },
+    "com.esotericsoftware.spine.spine-csharp": {
+      "version": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-csharp/src#4.2",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "67d38adebfc6b8b9fb0e65cfe4b200d56fbc5ac8"
+    },
+    "com.esotericsoftware.spine.spine-unity": {
+      "version": "https://github.com/EsotericSoftware/spine-runtimes.git?path=spine-unity/Assets/Spine#4.2",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.physics": "1.0.0",
+        "com.unity.modules.physics2d": "1.0.0",
+        "com.esotericsoftware.spine.spine-csharp": "4.2.0"
+      },
+      "hash": "67d38adebfc6b8b9fb0e65cfe4b200d56fbc5ac8"
     },
     "com.google.external-dependency-manager": {
-      "version": "1.2.183",
+      "version": "1.2.186",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
     "com.taptap.sdk.core": {
-      "version": "https://github.com/taptap/TapSDKCore-Unity.git#4.4.3",
+      "version": "https://github.com/taptap/tapsdk-unity-dist.git?path=/Core#4.8.4",
       "depth": 0,
       "source": "git",
       "dependencies": {
         "com.google.external-dependency-manager": "1.2.179"
       },
-      "hash": "d8c6926ec5dd89c3e35d2bc59c36de674151aff4"
+      "hash": "b3b8c0ba8a8dbfaf4613241672e42a8da8c838bb"
     },
     "com.taptap.sdk.login": {
-      "version": "https://github.com/taptap/TapSDKLogin-Unity.git#4.4.3",
+      "version": "https://github.com/taptap/tapsdk-unity-dist.git?path=/Login#4.8.4",
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.taptap.sdk.core": "4.4.3"
+        "com.taptap.sdk.core": "4.8.4"
       },
-      "hash": "b8400a427c89251f42930a4dad842346c3ad8a72"
+      "hash": "b3b8c0ba8a8dbfaf4613241672e42a8da8c838bb"
     },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
@@ -41,20 +61,18 @@
       "source": "builtin",
       "dependencies": {}
     },
-    "com.unity.cinemachine": {
-      "version": "2.10.3",
+    "com.unity.addressables": {
+      "version": "1.22.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.test-framework": "1.1.31"
+        "com.unity.scriptablebuildpipeline": "1.21.25",
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.unitywebrequestassetbundle": "1.0.0"
       },
-      "url": "https://packages.unity.cn"
-    },
-    "com.unity.collab-proxy": {
-      "version": "2.6.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
       "url": "https://packages.unity.cn"
     },
     "com.unity.editorcoroutines": {
@@ -110,6 +128,16 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
+    "com.unity.localization": {
+      "version": "1.5.3",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.addressables": "1.22.2",
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+      },
+      "url": "https://packages.unity.cn"
+    },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
       "depth": 0,
@@ -119,6 +147,13 @@
     },
     "com.unity.performance.profile-analyzer": {
       "version": "1.2.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.scriptablebuildpipeline": {
+      "version": "1.21.25",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -153,23 +188,11 @@
       "url": "https://packages.unity.cn"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.7",
+      "version": "3.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0"
-      },
-      "url": "https://packages.unity.cn"
-    },
-    "com.unity.timeline": {
-      "version": "1.7.6",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.director": "1.0.0",
-        "com.unity.modules.animation": "1.0.0",
-        "com.unity.modules.audio": "1.0.0",
-        "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.cn"
     },
@@ -181,16 +204,6 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "com.unity.visualscripting": {
-      "version": "1.9.4",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.cn"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
