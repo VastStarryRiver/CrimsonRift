@@ -160,11 +160,11 @@ public class ConfigTool
                     {
                         LoadExcelData(dataTypeList[i], fieldNameList[i], columnData[i], ref serverConfigData, columnData[keyIndex]);
                     }
+                }
 
-                    if (columnData[0] == "END")
-                    {
-                        goto over;
-                    }
+                if (columnData[0] == "END")
+                {
+                    goto over;
                 }
 
                 EditorUtility.DisplayProgressBar("配置表" + excelReader.Name + "正在导出数据中", "导出进度" + (excelReader.Depth + 1) + "/" + excelReader.RowCount, (excelReader.Depth + 1) * 1.0f / excelReader.RowCount);

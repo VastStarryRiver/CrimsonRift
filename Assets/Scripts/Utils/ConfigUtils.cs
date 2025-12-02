@@ -72,6 +72,11 @@ public class ConfigUtils
         }
     }
 
+    public static void GetConfigData(string configName, int id, string name = "", LuaFunction callBack = null)
+    {
+        GetConfigData(configName, id.ToString(), name, callBack);
+    }
+
     public static void GetConfigData(string configName, string index, string name = "", LuaFunction callBack = null)
     {
         string key = configName;
