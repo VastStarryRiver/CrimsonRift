@@ -132,9 +132,9 @@ public class AddressablesTool
                     Match match = Regex.Match(path2, @"Atlas\d{2}");
                     group = match.Value;
                 }
-                else if (path2.Contains("/Animtion/"))
+                else if (path2.Contains("/Animation/"))
                 {
-                    group = "Animtion";
+                    group = "Animation";
                 }
                 else if (path2.Contains("/Audios/"))
                 {
