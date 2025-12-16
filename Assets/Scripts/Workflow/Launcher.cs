@@ -14,13 +14,8 @@ public class Launcher : MonoBehaviour
     private void Awake()
     {
         DebugLogTool.InitDebugErrorLog();
-        GameObject gameManager = GameObject.Find("GameManager");
-        if (gameManager == null)
-        {
-            gameManager = new GameObject("GameManager");
-            gameManager.AddComponent<GameManager>();
-        }
-        DontDestroyOnLoad(gameManager);
+        Utils.CreateManagerInstance("GameManager");
+        Utils.CreateManagerInstance("AudioManager", new string[] { "AudioListener" });
     }
 
     private void OnEnable()
@@ -73,19 +68,32 @@ public class Launcher : MonoBehaviour
     {
         AddressablesManager.Instance.AsyncLoadGameObject("UI_Root.prefab", (asset1) =>
         {
-            GameObject go = GameObject.Instantiate<GameObject>(asset1, Vector3.zero, Quaternion.identity);
-            go.name = "UI_Root";
-            DontDestroyOnLoad(go);
+            GameObject go = GameObject.Find("UI_Root");
+
+            if (go == null)
+            {
+                go = GameObject.Instantiate<GameObject>(asset1, Vector3.zero, Quaternion.identity);
+                go.name = "UI_Root";
+                DontDestroyOnLoad(go);
+            }
+
             AddressablesManager.Instance.AsyncLoadGameObject("HotUpdatePanel.prefab", (asset2) =>
             {
-                Transform parent = go.transform.Find("Canvas_0/Ts_Panel");
-                GameObject go2 = GameObject.Instantiate<GameObject>(asset2, Vector3.zero, Quaternion.identity, parent);
+                GameObject go2 = GameObject.Instantiate<GameObject>(asset2, Vector3.zero, Quaternion.identity, go.transform.Find("Canvas_0/Ts_Panel"));
+                go2.name = "HotUpdatePanel";
                 m_hotUpdatePanel = go2.GetComponent<GameLoadingPanel>();
+
                 AddressablesManager.Instance.AsyncLoadGameObject("SceneGameObject.prefab", (asset3) =>
                 {
-                    GameObject go = GameObject.Instantiate<GameObject>(asset3, Vector3.zero, Quaternion.identity);
-                    go.name = "SceneGameObject";
-                    DontDestroyOnLoad(go);
+                    GameObject go3 = GameObject.Find("SceneGameObject");
+
+                    if (go3 == null)
+                    {
+                        go3 = GameObject.Instantiate<GameObject>(asset3, Vector3.zero, Quaternion.identity);
+                        go3.name = "SceneGameObject";
+                        DontDestroyOnLoad(go3);
+                    }
+
                     callBack?.Invoke();
                 });
             });

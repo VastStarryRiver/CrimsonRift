@@ -256,6 +256,10 @@ public class Utils
 
     public static void RestartGame()
     {
+#if !UNITY_EDITOR
+        Application.logMessageReceived -= DebugLogTool.ShowDebugErrorLog;
+#endif
+
         List<string> list = new List<string>();
 
         foreach (var item in LuaManager.Instance.m_luaClassList)
@@ -638,11 +642,31 @@ public class Utils
         if (wrapMode == WrapMode.Once)
         {
             yield return new WaitWhile(() => animation.isPlaying);
+            callBack?.Call();
+        }
+    }
 
-            if (callBack != null)
+    public static void CreateManagerInstance(string managerName, string[] components = null)
+    {
+        GameObject obj = GameObject.Find(managerName);
+
+        if (obj != null)
+        {
+            return;
+        }
+
+        obj = new GameObject(managerName);
+
+        if (components != null && components.Length > 0)
+        {
+            for (int i = 0; i < components.Length; i++)
             {
-                callBack.Call();
+                AddComponent(obj, "", components[i]);
             }
         }
+
+        AddComponent(obj, "", managerName);
+
+        UnityEngine.Object.DontDestroyOnLoad(obj);
     }
 }
