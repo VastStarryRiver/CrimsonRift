@@ -14,18 +14,11 @@ public class AddressablesTool
 
 
 
-    [MenuItem("Tools/Addressables/BuildBundle_Android", false, -4)]
+    [MenuItem("VastStarryRiver/构建AssetBundle", false, 20)]
     public static void BuildAddressables_Android()
     {
         SetProfileValue("Android");
         BuildAddressables("Android");
-    }
-
-    [MenuItem("Tools/Addressables/BuildBundle_Windows", false, -3)]
-    public static void BuildAddressables_Windows()
-    {
-        SetProfileValue("Windows");
-        BuildAddressables("Windows");
     }
 
 
@@ -125,7 +118,7 @@ public class AddressablesTool
 
                 string group = "";
                 string address = Path.GetFileName(path2);
-                List<string> labels = new List<string>() { "Preload" };
+                List<string> labels = new List<string>() { "Download" };
 
                 if (Regex.IsMatch(path2, @"Atlas\d{2}"))
                 {

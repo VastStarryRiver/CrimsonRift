@@ -31,7 +31,7 @@ namespace XLua.CSObjectWrap
 			Utils.EndObjectRegister(type, L, translator, null, null,
 			    null, null, null);
 
-		    Utils.BeginClassRegister(type, L, __CreateInstance, 27, 3, 0);
+		    Utils.BeginClassRegister(type, L, __CreateInstance, 28, 3, 0);
 			Utils.RegisterFunc(L, Utils.CLS_IDX, "GetGameObject", _m_GetGameObject_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "GetTransform", _m_GetTransform_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "GetComponent", _m_GetComponent_xlua_st_);
@@ -58,6 +58,7 @@ namespace XLua.CSObjectWrap
             Utils.RegisterFunc(L, Utils.CLS_IDX, "AddLongPressListener", _m_AddLongPressListener_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "ReleaseLongPressListener", _m_ReleaseLongPressListener_xlua_st_);
             Utils.RegisterFunc(L, Utils.CLS_IDX, "PlayAnimation", _m_PlayAnimation_xlua_st_);
+            Utils.RegisterFunc(L, Utils.CLS_IDX, "CreateManagerInstance", _m_CreateManagerInstance_xlua_st_);
             
 			
             
@@ -1058,6 +1059,47 @@ namespace XLua.CSObjectWrap
             }
             
             return LuaAPI.luaL_error(L, "invalid arguments to global::Utils.PlayAnimation!");
+            
+        }
+        
+        [MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+        static int _m_CreateManagerInstance_xlua_st_(RealStatePtr L)
+        {
+		    try {
+            
+                ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+            
+            
+            
+			    int gen_param_count = LuaAPI.lua_gettop(L);
+            
+                if(gen_param_count == 2&& (LuaAPI.lua_isnil(L, 1) || LuaAPI.lua_type(L, 1) == LuaTypes.LUA_TSTRING)&& translator.Assignable<string[]>(L, 2)) 
+                {
+                    string _managerName = LuaAPI.lua_tostring(L, 1);
+                    string[] _components = (string[])translator.GetObject(L, 2, typeof(string[]));
+                    
+                    global::Utils.CreateManagerInstance( _managerName, _components );
+                    
+                    
+                    
+                    return 0;
+                }
+                if(gen_param_count == 1&& (LuaAPI.lua_isnil(L, 1) || LuaAPI.lua_type(L, 1) == LuaTypes.LUA_TSTRING)) 
+                {
+                    string _managerName = LuaAPI.lua_tostring(L, 1);
+                    
+                    global::Utils.CreateManagerInstance( _managerName );
+                    
+                    
+                    
+                    return 0;
+                }
+                
+            } catch(System.Exception gen_e) {
+                return LuaAPI.luaL_error(L, "c# exception:" + gen_e);
+            }
+            
+            return LuaAPI.luaL_error(L, "invalid arguments to global::Utils.CreateManagerInstance!");
             
         }
         

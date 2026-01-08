@@ -29,6 +29,7 @@ public class ConfigUtils
     public readonly static string m_assetsPath = m_localRootPath + "Assets/GameAssets";
     public readonly static string m_localAssetsPath = m_localRootPath + "Assets/GameAssets/LocalAssets";
     public readonly static string m_keystorePath = m_localRootPath + "CrimsonRift.keystore";
+    public readonly static string m_buildPath = m_localRootPath + "Build";
 
     public static string CatalogPath//热更新目录文件的地址
     {

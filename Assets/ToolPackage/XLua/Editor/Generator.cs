@@ -1647,7 +1647,7 @@ namespace CSObjectWrapEditor
             }
         }
 
-        [MenuItem("Tools/XLua/Generate Code", false, 1)]
+        [MenuItem("VastStarryRiver/XLua/Generate Code", false, 0)]
         public static void GenAll()
         {
 #if UNITY_2018 && (UNITY_EDITOR_WIN || UNITY_EDITOR_OSX)
@@ -1731,7 +1731,7 @@ namespace CSObjectWrapEditor
         }
 #endif
 
-        [MenuItem("Tools/XLua/Clear Generated Code", false, 2)]
+        [MenuItem("VastStarryRiver/XLua/Clear Generated Code", false, 1)]
         public static void ClearAll()
         {
             clear(GeneratorConfig.common_path);

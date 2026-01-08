@@ -798,7 +798,7 @@ namespace XLua
 
 #if !XLUA_GENERAL
         [PostProcessScene]
-        [MenuItem("Tools/XLua/Hotfix Inject In Editor", false, 3)]
+        [MenuItem("VastStarryRiver/XLua/Hotfix Inject In Editor", false, 2)]
         public static void HotfixInject()
         {
             if (EditorApplication.isCompiling || Application.isPlaying)
@@ -1650,7 +1650,7 @@ namespace XLua
 #if !UNITY_2019_1_OR_NEWER
         [PostProcessScene]
 #endif
-        [MenuItem("Tools/XLua/Hotfix Inject In Editor", false, 3)]
+        [MenuItem("VastStarryRiver/XLua/Hotfix Inject In Editor", false, 2)]
         public static void HotfixInject()
         {
             HotfixInject("./Library/ScriptAssemblies");

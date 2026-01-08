@@ -7,7 +7,7 @@ using ExcelDataReader;
 
 public class ConfigTool
 {
-    [MenuItem("Tools/Config/导出Excel表的配置数据", false, -2)]
+    [MenuItem("VastStarryRiver/Config/导出Excel表的配置数据", false, 10)]
     public static void ExportConfig()
     {
         if (Directory.Exists(ConfigUtils.m_configBinPath))
@@ -55,7 +55,7 @@ public class ConfigTool
         AssetDatabase.Refresh();
     }
 
-    [MenuItem("Tools/Config/导出Web配置", false, -1)]
+    [MenuItem("VastStarryRiver/Config/导出Web配置", false, 11)]
     public static void BuildWebBinFile()
     {
         using (FileStream fileStream = new FileStream(ConfigUtils.m_localRootPath + "WebData.txt", FileMode.Open))

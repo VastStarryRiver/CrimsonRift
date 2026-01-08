@@ -33,7 +33,7 @@ public class CheckResourceUpdates : IStateNode
     private void CheckForResourceUpdates()
     {
         // 获取需要更新的资源大小
-        var mainHandle = Addressables.GetDownloadSizeAsync("Preload");
+        var mainHandle = Addressables.GetDownloadSizeAsync("Download");
 
         GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "检查资源更新");
 
@@ -71,7 +71,7 @@ public class CheckResourceUpdates : IStateNode
     /// </summary>
     private IEnumerator DownloadUpdates()
     {
-        var handle = Addressables.DownloadDependenciesAsync("Preload");
+        var handle = Addressables.DownloadDependenciesAsync("Download");
 
         GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "下载资源中");
 
