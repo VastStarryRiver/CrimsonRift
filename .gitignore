@@ -10,7 +10,6 @@
 /Temp/
 /obj/
 /UserSettings/
-/ProjectSettings/
 /WebData.txt
 Assets/AddressableAssetsData/
 Assets/AddressableAssetsData.meta
@@ -18,3 +17,4 @@ Assets/TapSDK/
 Assets/TapSDK.meta
 Assets/GameAssets/LocalAssets/WebData.bin
 Assets/GameAssets/LocalAssets/WebData.bin.meta
+/Build
