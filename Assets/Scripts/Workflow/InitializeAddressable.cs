@@ -32,13 +32,13 @@ public class InitializeAddressable : IStateNode
     {
         var mainHandle = Addressables.InitializeAsync();
 
-        GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "初始化资源管理");
+        GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "初始化资源管理");
 
         mainHandle.Completed += (handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
-                GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "初始化资源管理，成功！");
+                GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "初始化资源管理，成功！");
 
                 m_machine.SetBlackboardValue("InitializeAsync", () => {
                     if (handle.IsValid())
@@ -65,7 +65,7 @@ public class InitializeAddressable : IStateNode
             }
             else
             {
-                GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "初始化资源管理，失败！");
+                GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "初始化资源管理，失败！");
             }
         };
     }

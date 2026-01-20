@@ -269,6 +269,12 @@ namespace XLua.CSObjectWrap
             translator.DelayWrapLoader(typeof(AddressablesManager), AddressablesManagerWrap.__Register);
         
         
+            translator.DelayWrapLoader(typeof(GameManager), GameManagerWrap.__Register);
+        
+        
+            translator.DelayWrapLoader(typeof(AudioManager), AudioManagerWrap.__Register);
+        
+        
         
         }
         

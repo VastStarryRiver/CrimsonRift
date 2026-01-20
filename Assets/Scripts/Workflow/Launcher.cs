@@ -20,9 +20,9 @@ public class Launcher : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.Instance.AddEventListener("Launcher_ShowTips", ShowTips);
-        GameManager.Instance.AddEventListener("Launcher_ShowProgress", ShowProgress);
-        GameManager.Instance.AddEventListener("Launcher_StartGame", StartGame);
+        GameManager.Instance.AddCSEventListener("Launcher_ShowTips", ShowTips);
+        GameManager.Instance.AddCSEventListener("Launcher_ShowProgress", ShowProgress);
+        GameManager.Instance.AddCSEventListener("Launcher_StartGame", StartGame);
     }
 
     private void Start()
@@ -42,11 +42,11 @@ public class Launcher : MonoBehaviour
             else
             {
                 List<long> progress = new List<long>() { 0, 3000000 };
-                GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "演示动画播放中");
+                GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "演示动画播放中");
                 DOVirtual.Float(0, 3000000, 3, (value) =>
                 {
                     progress[0] = (long)value;
-                    GameManager.Instance.InvokeEventCallBack("Launcher_ShowProgress", progress);
+                    GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowProgress", progress);
                 }).OnComplete(() =>
                 {
                     stateMachine.Play<InitializeAddressable>();
@@ -57,9 +57,9 @@ public class Launcher : MonoBehaviour
 
     private void OnDisable()
     {
-        GameManager.Instance.RemoveEventListener("Launcher_ShowTips", ShowTips);
-        GameManager.Instance.RemoveEventListener("Launcher_ShowProgress", ShowProgress);
-        GameManager.Instance.RemoveEventListener("Launcher_StartGame", StartGame);
+        GameManager.Instance.RemoveCSEventListener("Launcher_ShowTips", ShowTips);
+        GameManager.Instance.RemoveCSEventListener("Launcher_ShowProgress", ShowProgress);
+        GameManager.Instance.RemoveCSEventListener("Launcher_StartGame", StartGame);
     }
 
 

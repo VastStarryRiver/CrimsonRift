@@ -124,6 +124,8 @@
 		<type fullname="LanguageManager" preserve="all"/>
 		<type fullname="DebugLogTool" preserve="all"/>
 		<type fullname="AddressablesManager" preserve="all"/>
+		<type fullname="GameManager" preserve="all"/>
+		<type fullname="AudioManager" preserve="all"/>
 		
 	</assembly>
 

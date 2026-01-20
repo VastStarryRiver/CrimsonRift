@@ -45,22 +45,22 @@ public class StartGame : IStateNode
     /// </summary>
     private async void Play()
     {
-        GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "初始化本地化系统");
+        GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "初始化本地化系统");
 
         await LocalizationSettings.InitializationOperation.Task;
 
-        GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "初始化本地化系统，成功！");
+        GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "初始化本地化系统，成功！");
 
         LanguageManager.Instance.SetLanguageIndex(LanguageManager.Instance.LanguageIndex, false);
         SdkManager.Instance.InitTapTapSdkOptions();
         MessageNetManager.Instance.Reset();
 
-        GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "开始游戏");
+        GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "开始游戏");
 
         AddressablesManager.Instance.PreLoadLuaBytes(() =>
         {
             LuaManager.Instance.Reset();
-            GameManager.Instance.InvokeEventCallBack("Launcher_StartGame");
+            GameManager.Instance.InvokeCSEventCallBack("Launcher_StartGame");
         });
     }
 }

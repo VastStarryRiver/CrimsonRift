@@ -95,5 +95,7 @@ public static class CustomSettings
         typeof(LanguageManager),
         typeof(DebugLogTool),
         typeof(AddressablesManager),
+        typeof(GameManager),
+        typeof(AudioManager),
     };
 }

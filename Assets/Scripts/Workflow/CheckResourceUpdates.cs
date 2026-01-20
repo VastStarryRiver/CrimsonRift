@@ -35,13 +35,13 @@ public class CheckResourceUpdates : IStateNode
         // 获取需要更新的资源大小
         var mainHandle = Addressables.GetDownloadSizeAsync("Download");
 
-        GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "检查资源更新");
+        GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "检查资源更新");
 
         mainHandle.Completed += (handle) =>
         {
             if (handle.Status == AsyncOperationStatus.Succeeded)
             {
-                GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "检查资源更新，成功！");
+                GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "检查资源更新，成功！");
 
                 m_machine.SetBlackboardValue("CheckForResourceUpdates", () => {
                     if (handle.IsValid())
@@ -61,7 +61,7 @@ public class CheckResourceUpdates : IStateNode
             }
             else
             {
-                GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "检查资源更新，失败！");
+                GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "检查资源更新，失败！");
             }
         };
     }
@@ -73,7 +73,7 @@ public class CheckResourceUpdates : IStateNode
     {
         var handle = Addressables.DownloadDependenciesAsync("Download");
 
-        GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "下载资源中");
+        GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "下载资源中");
 
         List<long> progress = new List<long>() { 0, handle.GetDownloadStatus().TotalBytes };
 
@@ -81,13 +81,13 @@ public class CheckResourceUpdates : IStateNode
         while (!handle.IsDone)
         {
             progress[0] = handle.GetDownloadStatus().DownloadedBytes;
-            GameManager.Instance.InvokeEventCallBack("Launcher_ShowProgress", progress);
+            GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowProgress", progress);
             yield return null;
         }
 
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
-            GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "下载资源，成功！");
+            GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "下载资源，成功！");
             m_machine.SetBlackboardValue("DownloadUpdates", () => {
                 if (handle.IsValid())
                 {
@@ -98,7 +98,7 @@ public class CheckResourceUpdates : IStateNode
         }
         else
         {
-            GameManager.Instance.InvokeEventCallBack("Launcher_ShowTips", "下载资源，失败！");
+            GameManager.Instance.InvokeCSEventCallBack("Launcher_ShowTips", "下载资源，失败！");
         }
     }
 }
